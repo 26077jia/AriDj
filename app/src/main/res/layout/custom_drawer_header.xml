@@ -14,7 +14,8 @@
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginLeft="16dp"
         android:padding="8dp"
         android:src="@mipmap/img_user"/>
 
@@ -23,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:padding="16dp"
+        android:padding="24dp"
         android:text="ID/UserName：******"
         android:textColor="@android:color/white"
         android:textSize="12sp"/>
