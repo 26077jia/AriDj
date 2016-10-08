@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_login_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="16"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="9">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/et_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="@string/login_account_hint"
+            android:textSize="16sp"
+            app:met_baseColor="@color/white"
+            app:met_clearButton="true"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextSize="16sp"
+            app:met_floatingLabelText=""
+
+            app:met_iconLeft="@mipmap/icon_user_normal"
+            app:met_primaryColor="#02fdff" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_account"
+            android:hint="@string/login_pwd_hint"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            app:met_baseColor="@color/white"
+            app:met_clearButton="true"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextSize="16sp"
+            app:met_floatingLabelText=""
+            app:met_iconLeft="@mipmap/icon_pwd_normal"
+            app:met_primaryColor="#02fdff" />
+
+        <CheckBox
+            android:id="@+id/chk_rembPwd"
+            style="@style/MyCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_pwd"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/login_rempwd"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:paddingLeft="8dp"
+            android:checked="false"
+            />
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chk_rembPwd"
+            android:background="@drawable/btn_login_sel"
+            android:text="@string/login_btn_login"
+            android:textColor="@color/color_login_btn_text"
+
+            android:textSize="16sp"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_card_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14dp"
+                    android:src="@mipmap/icon_card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_card"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="33dp"
+                android:layout_marginRight="33dp"
+                android:background="@color/white">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_nocheck_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14dp"
+                    android:src="@mipmap/icon_nouser" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_nouser"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

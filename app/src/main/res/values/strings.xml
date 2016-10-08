@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AriDj</string>
+    <string name="login_pwd_hint">密码</string>
+    <string name="login_account_hint">账号</string>
+    <string name="login_card">打卡登录</string>
+    <string name="login_nouser">无账号登录</string>
+    <string name="login_btn_login">登  录</string>
+    <string name="login_rempwd">记住账号密码</string>
+    <string name="opendrawer">打开抽屉</string>
+    <string name="closedrawer">关闭抽屉</string>
+</resources>
