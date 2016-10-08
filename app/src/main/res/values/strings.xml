@@ -1,11 +1,24 @@
 <resources>
     <string name="app_name">AriDj</string>
+
+    <!-- LoginActivity -->
     <string name="login_pwd_hint">密码</string>
     <string name="login_account_hint">账号</string>
     <string name="login_card">打卡登录</string>
     <string name="login_nouser">无账号登录</string>
     <string name="login_btn_login">登  录</string>
     <string name="login_rempwd">记住账号密码</string>
+
     <string name="opendrawer">打开抽屉</string>
     <string name="closedrawer">关闭抽屉</string>
+    
+    <!-- slidingMenu -->
+    <string name="drawer_data_manage">数据管理</string>
+    <string name="drawer_data_updating">数据更新</string>
+    <string name="drawer_data_query">数据查询</string>
+    <string name="drawer_spot_check">点检仪</string>
+    <string name="drawer_setting">设置</string>
+    <string name="drawer_about">关于</string>
+    <string name="drawer_exit">退出</string>
+    
 </resources>

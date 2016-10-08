@@ -39,12 +39,12 @@ public class MainActivity extends BaseActivity {
 
 
         //TODO 设置toolbar logo 图标
-        // toolbar.setNavigationIcon(R.mipmap.icon_nav);
+
         toolbar.setLogo(R.mipmap.mainlogo);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
-       /* getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);*/
+      /*  getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setHomeButtonEnabled(false);*/
         toolbar.setNavigationIcon(R.mipmap.icon_nav);
 
         /* API19 状态栏遮罩toolbar */
@@ -58,7 +58,6 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onDrawerClosed(View drawerView) {
                 //TODO 抽屉打开时事件处理
-
                 flag = true;
             }
 
