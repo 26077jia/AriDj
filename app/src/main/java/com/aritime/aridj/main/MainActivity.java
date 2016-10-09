@@ -1,97 +1,68 @@
 package com.aritime.aridj.main;
 
-import android.os.Build;
-import android.support.annotation.NonNull;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
-import android.view.MenuItem;
-import android.view.View;
 
 import com.aritime.aridj.R;
 import com.aritime.aridj.base.BaseActivity;
+import com.jaeger.library.StatusBarUtil;
+
+/**
+ * Created by jiajia on 2016/10/8.
+ */
 
 public class MainActivity extends BaseActivity {
-    private Toolbar toolbar;
-    private DrawerLayout dl_main;
-    private NavigationView nav_main;
-    private ActionBarDrawerToggle drawerToggle;// 标题栏菜单抽屉开关
+    private DrawerLayout mDrawerLayout;
+    private Toolbar mToolbar;
+    private NavigationView mNavView;
 
-    private boolean flag = false;// 抽屉是否打开标志位，默认false，抽屉关闭
+    private int mStatusBarColor;//状态栏颜色
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
-        initWindow();
         initView();
         initEvent();
-        
     }
 
     private void initView() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        dl_main = (DrawerLayout) findViewById(R.id.dl_main);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mNavView = (NavigationView) findViewById(R.id.main_nav);
 
+        /* 设置toolbar不显示标题、显示背景色及logo */
+        setSupportActionBar(mToolbar);
+        mToolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        mToolbar.setLogo(R.mipmap.mainlogo);
 
-        //TODO 设置toolbar logo 图标
+        //设置状态栏样式
+        setStatusBar();
 
-        toolbar.setLogo(R.mipmap.mainlogo);
-        toolbar.setTitle("");
-        setSupportActionBar(toolbar);
-      /*  getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setHomeButtonEnabled(false);*/
-        toolbar.setNavigationIcon(R.mipmap.icon_nav);
-
-        /* API19 状态栏遮罩toolbar */
-        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-            toolbar.setPadding(0,24,0,0);
-        }
+        // 设置menu图标显示原始颜色
+        mNavView.setItemIconTintList(null);
     }
 
     private void initEvent() {
-        drawerToggle = new ActionBarDrawerToggle(this, dl_main, toolbar, R.string.opendrawer, R.string.closedrawer) {
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                //TODO 抽屉打开时事件处理
-                flag = true;
-            }
 
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                //TODO 抽屉关闭时事件处理
-                flag = false;
-            }
-        };
-        drawerToggle.syncState();
-        dl_main.addDrawerListener(drawerToggle);
-        dl_main.setFocusableInTouchMode(true);
+        /* 打开关闭侧滑菜单事件监听，及状态同步 */
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.opendrawer,
+                R.string.closedrawer);
+        mDrawerLayout.setDrawerListener(toggle);
+        toggle.syncState();
 
-        if (nav_main != null) {
-            nav_main.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    //TODO 切换到相应的Fragment
-
-                    dl_main.closeDrawers();
-                    return false;
-                }
-            });
-        }
 
     }
-    /**
-     * 模拟返回键关闭侧栏菜单
-     * */
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (flag) {
-            dl_main.closeDrawers();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
+
+    protected void setStatusBar() {
+
+        /* 设置DrawerLayout沉浸式菜单栏样式 */
+        mStatusBarColor = getResources().getColor(R.color.colorPrimary);
+        StatusBarUtil.setColorForDrawerLayout(MainActivity.this, mDrawerLayout, mStatusBarColor, 0);
     }
 }

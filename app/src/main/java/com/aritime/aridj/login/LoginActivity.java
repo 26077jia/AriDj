@@ -3,14 +3,12 @@ package com.aritime.aridj.login;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.aritime.aridj.R;
 import com.aritime.aridj.base.BaseActivity;
-import com.aritime.aridj.main.DrawerActivity;
 import com.aritime.aridj.main.MainActivity;
 
 /**
@@ -23,9 +21,7 @@ public class LoginActivity extends BaseActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initWindow();
         setContentView(R.layout.act_login);
-
         initView();
         initEvent();
     }
@@ -66,7 +62,6 @@ public class LoginActivity extends BaseActivity{
     public void cardLogin() {
         //TODO 刷卡登录
 
-
     }
 
     public void nocheckLogin() {
@@ -75,7 +70,7 @@ public class LoginActivity extends BaseActivity{
     }
     /*登录验证成功或无需验证直接登录*/
     public void loginSucess(){
-        Intent intent = new Intent(LoginActivity.this,DrawerActivity.class);
+        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
         startActivity(intent);
     }
 }

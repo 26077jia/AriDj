@@ -17,7 +17,10 @@
             android:id="@+id/drawer_data_query"
             android:title="@string/drawer_data_query"
             android:icon="@mipmap/icon_data_query"/>
-
+        <item
+            android:id="@+id/drawer_spot_check"
+            android:title="@string/drawer_spot_check"
+            android:icon="@mipmap/icon_spot_check"/>
 
 
         <item
