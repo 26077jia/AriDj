@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#cd3e3a</color>
     <color name="colorPrimaryDark">#cd3e3a</color>
     <color name="colorAccent">#ffffff</color>
 
-    <color name="color_login_bg">#cd3e3a</color>
+    <!-- Common -->
     <color name="white">#ffffff</color>
+    <color name="gray">#cccccc</color>
+
+    <!-- Login -->
+    <color name="color_login_bg">#cd3e3a</color>
     <color name="color_login_btn_text">#cd3e3a</color>
     <color name="color_login_btn_sel">#E6ffffff</color>
-    <color name="gray">#cccccc</color>
+
+    <!-- NavigationView-->
+    <color name="color_nav_bg">#efefef</color>
+    <color name="color_nav_dividers_bottoom">#efefef</color>
+    <color name="color_nav_btn_font">#404040</color>
+    <color name="color_nav_btn_nor">#ffffff</color>
+    <color name="color_nav_btn_sel">#dcdcdc</color>
+
+
 </resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--
+        <item>中添加属性android：icon 设置图标
+    -->
+    <group
+        android:id="@+id/menu_group_data"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_data_manage"
+            app:actionLayout="@layout/custom_tint_view"
+            android:icon="@mipmap/icon_data_manage"
+            android:title="@string/drawer_data_manage" />
+        <item
+            android:id="@+id/drawer_data_updating"
+            android:icon="@mipmap/icon_data_updating"
+            android:title="@string/drawer_data_updating" />
+        <item
+            android:id="@+id/drawer_data_query"
+            android:icon="@mipmap/icon_data_query"
+            android:title="@string/drawer_data_query" />
+
+        <item
+            android:id="@+id/drawer_spot_check"
+            android:icon="@mipmap/icon_spot_check"
+            android:title="@string/drawer_spot_check" />
+        <item
+            android:id="@+id/drawer_card_reader"
+            android:icon="@mipmap/icon_card_reader"
+            android:title="@string/drawer_card_reader" />
+        <item
+            android:id="@+id/drawer_about"
+            android:icon="@mipmap/icon_about"
+            android:title="@string/drawer_about" />
+
+    </group>
+    <!-- <group
+         android:id="@+id/menu_group_equipment"
+         android:checkableBehavior="single">
+         <item
+             android:id="@+id/drawer_spot_check"
+             android:icon="@mipmap/icon_spot_check"
+             android:title="@string/drawer_spot_check" />
+         <item
+             android:id="@+id/drawer_card_reader"
+             android:icon="@mipmap/icon_card_reader"
+             android:title="@string/drawer_card_reader" />
+
+     </group>
+     <group
+         android:id="@+id/menu_group_setting"
+         android:checkableBehavior="single">
+
+         &lt;!&ndash;<item
+
+             android:id="@+id/drawer_setting"
+             android:icon="@mipmap/icon_setting"
+             android:title="@string/drawer_setting" />&ndash;&gt;
+         <item
+             android:id="@+id/drawer_about"
+             android:icon="@mipmap/icon_about"
+             android:title="@string/drawer_about" />
+        &lt;!&ndash; <item
+             android:id="@+id/drawer__exit"
+             android:icon="@mipmap/icon_exit"
+             android:title="@string/drawer_exit" />&ndash;&gt;
+
+
+     </group>
+ -->
+
+</menu>
