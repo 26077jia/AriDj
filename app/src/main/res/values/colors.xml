@@ -21,5 +21,11 @@
     <color name="color_nav_btn_nor">#ffffff</color>
     <color name="color_nav_btn_sel">#dcdcdc</color>
 
+    <!-- Main -->
+    <color name="color_tab_txt">#696969</color>
+    <color name="color_tab_txt_sel">#cd3e3a</color>
+    <color name="color_tab_indicator">#cd3e3a</color>
+    <color name="color_tab_divider">#ededed</color>
+
 
 </resources>

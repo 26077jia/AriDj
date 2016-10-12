@@ -30,4 +30,7 @@ dependencies {
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile 'com.jaeger.statusbaruitl:library:1.2.5'
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1'
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1'
+    compile 'com.ogaclejapan.smarttablayout:utils-v13:1.6.1'
 }

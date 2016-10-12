@@ -19,18 +19,55 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            >
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         </android.support.v7.widget.Toolbar>
         <!-- MainView -->
-        <RelativeLayout
-            android:id="@+id/main_view"
+        <LinearLayout
+            android:id="@+id/ll_main_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
+            android:orientation="vertical">
 
-        </RelativeLayout>
+           <!-- <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/tabl_maian"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:stl_defaultTabTextColor="@color/color_tab_txt"
+                app:stl_defaultTabTextSize="@dimen/font_normal"
+                app:stl_indicatorColor="@color/color_tab_indicator"
+                app:stl_indicatorInterpolation="linear"
+                app:stl_indicatorThickness="1dp"
+                app:stl_defaultTabTextHorizontalPadding="58dp"
+                app:stl_underlineThickness="1dp"
+                app:stl_underlineColor="@color/color_tab_divider"
+                app:stl_dividerThickness="0dp"
+
+                app:stl_indicatorWithoutPadding="true"
+                />-->
+             <android.support.design.widget.TabLayout
+                 android:id="@+id/tabl_maian"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 app:tabTextColor="@color/color_tab_txt"
+                 app:tabSelectedTextColor="@color/color_tab_txt_sel"
+                 app:tabIndicatorColor="@color/color_tab_indicator"
+
+                 >
+
+             </android.support.design.widget.TabLayout>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_mian"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
     </LinearLayout>
 
 
@@ -40,9 +77,9 @@
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@color/color_nav_bg"
         app:headerLayout="@layout/custom_drawer_header"
-        app:menu="@menu/menu_main_drawer"
-        android:background="@color/color_nav_bg">
+        app:menu="@menu/menu_main_drawer">
         <!--<Button
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -56,32 +93,33 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_gravity="bottom"
-            android:orientation="horizontal"
-            android:background="@color/white">
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/nav_bottom_btn_selector"
-            android:text="@string/drawer_setting"
-            android:textSize="@dimen/font_normal"
-            android:textColor="@color/color_nav_btn_font"
-            />
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/nav_bottom_btn_selector"
+                android:text="@string/drawer_setting"
+                android:textColor="@color/color_nav_btn_font"
+                android:textSize="@dimen/font_normal" />
+
             <LinearLayout
                 android:layout_width="0.5dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
                 android:background="@color/color_nav_dividers_bottoom">
 
             </LinearLayout>
+
             <Button
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/nav_bottom_btn_selector"
                 android:text="@string/drawer_exit"
-                android:textSize="@dimen/font_normal"
                 android:textColor="@color/color_nav_btn_font"
-                />
+                android:textSize="@dimen/font_normal" />
         </LinearLayout>
 
     </android.support.design.widget.NavigationView>
