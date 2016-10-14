@@ -21,5 +21,9 @@
     <string name="drawer_setting">设置</string>
     <string name="drawer_about">关于</string>
     <string name="drawer_exit">退出</string>
+
+    <!-- RouterFragment -->
+    <string name="router_name">路线：</string>
+    <string name="sign_name">标牌：</string>
     
 </resources>

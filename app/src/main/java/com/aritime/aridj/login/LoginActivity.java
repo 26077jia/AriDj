@@ -49,14 +49,14 @@ public class LoginActivity extends BaseActivity{
         ll_nocheck_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nocheckLogin();
+                noCheckLogin();
             }
         });
         
     }
     public void accoutLogin() {
         //TODO 账号密码登录
-        loginSucess();
+        loginSuccess();
     }
 
     public void cardLogin() {
@@ -64,12 +64,12 @@ public class LoginActivity extends BaseActivity{
 
     }
 
-    public void nocheckLogin() {
+    public void noCheckLogin() {
         //TODO 无验证直接登录
-        loginSucess();
+        loginSuccess();
     }
     /*登录验证成功或无需验证直接登录*/
-    public void loginSucess(){
+    public void loginSuccess(){
         Intent intent = new Intent(LoginActivity.this,MainActivity.class);
         startActivity(intent);
     }

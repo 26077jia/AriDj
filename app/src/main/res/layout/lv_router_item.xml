@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@color/color_router_lv_item_bg"
+    android:gravity="center_vertical">
+
+
+    <ImageView
+        android:id="@+id/img_router"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/icon_router" />
+
+
+    <TextView
+        android:id="@+id/tv_router_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/img_router"
+        android:singleline="true"
+        android:ellipsize="end"
+        android:text="车间车间车间车间车车间车间车间车间车间车间一"
+        android:textColor="@color/color_router_lv_text_nor"
+        android:layout_marginRight="16dp"
+        android:textSize="@dimen/font_normal" />
+
+
+    <ImageView
+        android:id="@+id/img_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_enter" />
+
+    <TextView
+        android:id="@+id/tv_sign_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@id/img_enter"
+        android:text="/3"
+        android:textColor="@color/color_router_lv_text_light"
+        android:textSize="@dimen/font_normal" />
+
+    <TextView
+        android:id="@+id/tv_sign_check_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/tv_sign_count"
+        android:text="2"
+        android:textColor="@color/color_router_lv_text_nor"
+        android:textSize="@dimen/font_normal" />
+
+
+    <ImageView
+        android:id="@+id/img_sign"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/tv_sign_check_count"
+        android:scaleType="center"
+        android:src="@mipmap/icon_sign"/>
+</RelativeLayout>
