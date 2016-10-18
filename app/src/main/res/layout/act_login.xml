@@ -26,7 +26,7 @@
         android:layout_weight="9">
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/et_account"
+            android:id="@+id/et_user_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
@@ -43,10 +43,10 @@
 
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/et_pwd"
+            android:id="@+id/et_user_pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/et_account"
+            android:layout_below="@id/et_user_account"
             android:hint="@string/login_pwd_hint"
             android:inputType="textPassword"
             android:textSize="16sp"
@@ -59,15 +59,15 @@
             app:met_primaryColor="#02fdff" />
 
         <CheckBox
-            android:id="@+id/chk_rembPwd"
+            android:id="@+id/chk_remb_pwd"
             style="@style/MyCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/et_pwd"
+            android:layout_below="@id/et_user_pwd"
             android:layout_marginBottom="24dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="16dp"
-            android:text="@string/login_rempwd"
+            android:text="@string/login_remb_pwd"
             android:textColor="@color/white"
             android:textSize="12sp"
             android:paddingLeft="8dp"
@@ -79,7 +79,7 @@
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/chk_rembPwd"
+            android:layout_below="@id/chk_remb_pwd"
             android:background="@drawable/btn_login_sel"
             android:text="@string/login_btn_login"
             android:textColor="@color/color_login_btn_text"
@@ -127,7 +127,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ll_nocheck_login"
+                android:id="@+id/ll_no_user_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
@@ -142,7 +142,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/login_nouser"
+                    android:text="@string/login_no_user"
                     android:textColor="@color/white" />
             </LinearLayout>
 

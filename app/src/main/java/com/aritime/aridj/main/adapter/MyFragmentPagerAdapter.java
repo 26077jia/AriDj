@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.aritime.aridj.R;
 import com.aritime.aridj.main.measure.MeasureFragment;
 import com.aritime.aridj.main.router.ui.RouterFragment;
 

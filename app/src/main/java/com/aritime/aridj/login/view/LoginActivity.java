@@ -1,4 +1,4 @@
-package com.aritime.aridj.login;
+package com.aritime.aridj.login.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,8 +16,8 @@ import com.aritime.aridj.main.MainActivity;
  */
 
 public class LoginActivity extends BaseActivity{
-    private Button btn_login;
-    private LinearLayout ll_card_login, ll_nocheck_login;
+    private Button mbtn_login;
+    private LinearLayout mll_card_login, mll_nocheck_login;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,26 +27,26 @@ public class LoginActivity extends BaseActivity{
     }
 
     private void initView() {
-        btn_login = (Button) findViewById(R.id.btn_login);
-        ll_card_login = (LinearLayout) findViewById(R.id.ll_card_login);
-        ll_nocheck_login = (LinearLayout) findViewById(R.id.ll_nocheck_login);
+        mbtn_login = (Button) findViewById(R.id.btn_login);
+        mll_card_login = (LinearLayout) findViewById(R.id.ll_card_login);
+        mll_nocheck_login = (LinearLayout) findViewById(R.id.ll_no_user_login);
     }
 
     private void initEvent() {
-        btn_login.setOnClickListener(new View.OnClickListener() {
+        mbtn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 accoutLogin();
             }
         });
-        ll_card_login.setOnClickListener(new View.OnClickListener() {
+        mll_card_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 cardLogin();
 
             }
         });
-        ll_nocheck_login.setOnClickListener(new View.OnClickListener() {
+        mll_nocheck_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 noCheckLogin();

@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.aritime.aridj.R;
 import com.aritime.aridj.base.BaseActivity;
 import com.aritime.aridj.main.adapter.MyFragmentPagerAdapter;
-import com.aritime.aridj.main.router.bean.Routerbean;
 import com.jaeger.library.StatusBarUtil;
 
 import java.lang.reflect.Field;
@@ -75,8 +74,8 @@ public class MainActivity extends BaseActivity {
     private void initEvent() {
 
         /* 打开关闭侧滑菜单事件监听，及状态同步 */
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.opendrawer,
-                R.string.closedrawer) {
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.open_drawer,
+                R.string.close_drawer) {
             @Override
             public void onDrawerClosed(View drawerView) {
                 flag_drawer = false;

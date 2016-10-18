@@ -21,4 +21,9 @@
         <item name="android:button">@drawable/checbox_login_sel</item>
         <!-- <item name = "android:textColor">@color/gray</item>-->
     </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/color_tab_txt</item>
+    </style>
 </resources>

@@ -6,8 +6,14 @@ package com.aritime.aridj.main.router.bean;
 
 public class Routerbean {
     private String routerName;
-    private int signCheckCounts;
-    private int signCounts;
+    private String signCheckCounts;
+    private String signCounts;
+
+    public Routerbean(String routerName, String signCheckCounts, String signCounts) {
+        this.routerName = routerName;
+        this.signCheckCounts = signCheckCounts;
+        this.signCounts = signCounts;
+    }
 
     public String getRouterName() {
         return routerName;
@@ -17,19 +23,19 @@ public class Routerbean {
         this.routerName = routerName;
     }
 
-    public int getSignCheckCounts() {
+    public String getSignCheckCounts() {
         return signCheckCounts;
     }
 
-    public void setSignCheckCounts(int signCheckCounts) {
+    public void setSignCheckCounts(String signCheckCounts) {
         this.signCheckCounts = signCheckCounts;
     }
 
-    public int getSignCounts() {
+    public String getSignCounts() {
         return signCounts;
     }
 
-    public void setSignCounts(int signCounts) {
+    public void setSignCounts(String signCounts) {
         this.signCounts = signCounts;
     }
 }

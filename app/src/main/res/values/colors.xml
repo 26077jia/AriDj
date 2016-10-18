@@ -29,7 +29,18 @@
 
     <!-- RouterFragment -->
     <color name="color_router_lv_item_bg">#f6f6f6</color>
+    <color name="color_router_lv_item_bg_sel">#dcdcdc</color>
     <color name="color_router_lv_text_nor">#696969</color>
     <color name="color_router_lv_text_light">#37cdcd</color>
+    
+    <!-- MeasureFragment -->
+    <color name="color_fab_bg">#cd3e3a</color>
+    <color name="color_measure_title_divider">#dcdcdc</color>
+    <color name="color_measure_title_bg">#f6f6f6</color>
+    <color name="color_measure_title_text">#37cdcd</color>
+    <color name="color_measure_numeric">#37cdcd</color>
+    <color name="color_measure_text">#696969</color>
+    <color name="color_measure_numeric_unit">#959595</color>
+
 
 </resources>

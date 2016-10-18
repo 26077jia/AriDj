@@ -1,50 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="48dp"
     android:layout_marginBottom="8dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     android:background="@color/color_router_lv_item_bg"
-    android:gravity="center_vertical">
-
-
+    android:gravity="center_vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
     <ImageView
         android:id="@+id/img_router"
         android:layout_width="16dp"
         android:layout_height="16dp"
-        android:scaleType="fitCenter"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
         android:src="@mipmap/icon_router" />
-
 
     <TextView
         android:id="@+id/tv_router_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_toRightOf="@id/img_router"
-        android:singleline="true"
-        android:ellipsize="end"
-        android:text="车间车间车间车间车车间车间车间车间车间车间一"
-        android:textColor="@color/color_router_lv_text_nor"
         android:layout_marginRight="16dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxEms="15"
+        android:textColor="@color/color_router_lv_text_nor"
+        android:layout_toRightOf="@id/img_router"
         android:textSize="@dimen/font_normal" />
-
 
     <ImageView
         android:id="@+id/img_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:src="@mipmap/icon_enter" />
+        android:src="@mipmap/icon_enter"
+        />
 
     <TextView
-        android:id="@+id/tv_sign_count"
+        android:id="@+id/tv_sign_counts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:layout_toLeftOf="@id/img_enter"
-        android:text="/3"
         android:textColor="@color/color_router_lv_text_light"
         android:textSize="@dimen/font_normal" />
 
@@ -52,8 +51,7 @@
         android:id="@+id/tv_sign_check_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/tv_sign_count"
-        android:text="2"
+        android:layout_toLeftOf="@id/tv_sign_counts"
         android:textColor="@color/color_router_lv_text_nor"
         android:textSize="@dimen/font_normal" />
 
@@ -62,8 +60,9 @@
         android:id="@+id/img_sign"
         android:layout_width="16dp"
         android:layout_height="16dp"
+        android:layout_marginTop="3dp"
         android:layout_marginRight="8dp"
         android:layout_toLeftOf="@id/tv_sign_check_count"
-        android:scaleType="center"
-        android:src="@mipmap/icon_sign"/>
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_sign" />
 </RelativeLayout>

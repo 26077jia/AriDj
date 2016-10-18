@@ -5,12 +5,12 @@
     <string name="login_pwd_hint">密码</string>
     <string name="login_account_hint">账号</string>
     <string name="login_card">打卡登录</string>
-    <string name="login_nouser">无账号登录</string>
+    <string name="login_no_user">无账号登录</string>
     <string name="login_btn_login">登  录</string>
-    <string name="login_rempwd">记住账号密码</string>
+    <string name="login_remb_pwd">记住账号密码</string>
 
-    <string name="opendrawer">打开抽屉</string>
-    <string name="closedrawer">关闭抽屉</string>
+    <string name="open_drawer">打开抽屉</string>
+    <string name="close_drawer">关闭抽屉</string>
     
     <!-- slidingMenu -->
     <string name="drawer_data_manage">数据管理</string>
@@ -22,8 +22,16 @@
     <string name="drawer_about">关于</string>
     <string name="drawer_exit">退出</string>
 
-    <!-- RouterFragment -->
-    <string name="router_name">路线：</string>
-    <string name="sign_name">标牌：</string>
+    <!-- Tab -->
+    <string name="tab_router">路  线</string>
+    <string name="tab_sign">标  牌</string>
+    
+    <!-- MeasureFragment -->
+    <string name="measure_title_machine">设备</string>
+    <string name="measure_title_measure_item">测量项</string>
+    <string name="measure_title_part">部位</string>
+    <string name="measure_title_numerical">数值</string>
+    
+    
     
 </resources>
