@@ -9,7 +9,7 @@
     <color name="white">#ffffff</color>
     <color name="gray">#cccccc</color>
 
-    <!-- Login -->
+    <!-- LoginActivity -->
     <color name="color_login_bg">#cd3e3a</color>
     <color name="color_login_btn_text">#cd3e3a</color>
     <color name="color_login_btn_sel">#E6ffffff</color>
@@ -41,6 +41,13 @@
     <color name="color_measure_numeric">#37cdcd</color>
     <color name="color_measure_text">#696969</color>
     <color name="color_measure_numeric_unit">#959595</color>
+
+    <!-- PopWindowBottom -->
+    <color name="color_pop_window_bg">#dcdcdc</color>
+    <color name="color_pop_window_item_bg">#ffffff</color>
+    <color name="color_pop_window_item_sel">#dcdcdc</color>
+    <color name="color_pop_window_text">#696969</color>
+
 
 
 </resources>

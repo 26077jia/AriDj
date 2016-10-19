@@ -32,6 +32,11 @@
     <string name="measure_title_part">部位</string>
     <string name="measure_title_numerical">数值</string>
     
-    
+    <!-- PopWindowBottom -->
+    <string name="win_bottom_rotate_speed">转速</string>
+    <string name="win_bottom_temperature">温度</string>
+    <string name="win_bottom_speed">速度</string>
+    <string name="win_bottom_meter_reading">抄表</string>
+    <string name="win_bottom_record">记录</string>
     
 </resources>

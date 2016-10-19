@@ -63,7 +63,7 @@ public class LoginPresenter implements LoginContract.Presenter {
      * 验证账号密码是否为空
      */
     public boolean verified() {
-        if (TextUtils.isEmpty(mView.getAccount()) && TextUtils.isEmpty(mView.getPwd())) {
+        if (TextUtils.isEmpty(mView.getAccount()) || TextUtils.isEmpty(mView.getPwd())) {
             mView.loginFailed("账号或密码不能为空！");
             return false;
         }

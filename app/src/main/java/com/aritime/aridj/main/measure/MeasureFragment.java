@@ -2,6 +2,7 @@ package com.aritime.aridj.main.measure;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,8 @@ import com.aritime.aridj.R;
 public class MeasureFragment extends Fragment {
     public static final String MEAS_PAGE = "measure_page";
     private int mPage;
+
+    private FloatingActionButton fab_measure;
 
     public static MeasureFragment newInstance() {
 
@@ -35,8 +38,23 @@ public class MeasureFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_measure,container,false);
+        View view = inflater.inflate(R.layout.fragment_measure, container, false);
+        fab_measure = (FloatingActionButton) view.findViewById(R.id.fab_measure);
+        fab_measure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popWindowBottom();
+            }
+        });
         //setUI(mpage)
         return view;
     }
+
+    private void popWindowBottom() {
+        BottomDialog bottomDialog = BottomDialog.newInstance();
+        bottomDialog.show(getChildFragmentManager(),BottomDialog.class.getSimpleName());
+
+
+    }
+
 }

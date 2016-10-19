@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_pop_window_bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="0.5dp"
+        android:background="@drawable/win_bottom_item_selector"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/icon_rotate_speed"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/icon_rotate_speed"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/icon_rotate_speed"
+            android:text="@string/win_bottom_rotate_speed"
+            android:textColor="@color/color_pop_window_text"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="0.5dp"
+        android:background="@drawable/win_bottom_item_selector"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/icon_temperature"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/icon_temperature"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/icon_temperature"
+            android:text="@string/win_bottom_temperature"
+            android:textColor="@color/color_pop_window_text"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="0.5dp"
+        android:background="@drawable/win_bottom_item_selector"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/icon_speed"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/icon_speed"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/icon_speed"
+            android:text="@string/win_bottom_speed"
+            android:textColor="@color/color_pop_window_text"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="0.5dp"
+        android:background="@drawable/win_bottom_item_selector"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/icon_meter_reading"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/icon_meter_reading"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/icon_meter_reading"
+            android:text="@string/win_bottom_meter_reading"
+            android:textColor="@color/color_pop_window_text"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/win_bottom_item_selector"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/icon_record"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/icon_record"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/icon_record"
+            android:text="@string/win_bottom_rotate_speed"
+            android:textColor="@color/color_pop_window_text"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -83,7 +83,6 @@
             android:background="@drawable/btn_login_sel"
             android:text="@string/login_btn_login"
             android:textColor="@color/color_login_btn_text"
-
             android:textSize="16sp"
 
             />
