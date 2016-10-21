@@ -31,13 +31,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private LoginContract.Presenter mLoginPresenter;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_login);
+
         initView();
         initEvent();
     }
+
 
     public void initView() {
         //控件初始化

@@ -1,6 +1,13 @@
 package com.aritime.aridj.main;
 
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.nfc.NfcAdapter;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -12,9 +19,11 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aritime.aridj.R;
 import com.aritime.aridj.base.BaseActivity;
+import com.aritime.aridj.login.view.LoginActivity;
 import com.aritime.aridj.main.adapter.MyFragmentPagerAdapter;
 import com.jaeger.library.StatusBarUtil;
 
@@ -35,13 +44,92 @@ public class MainActivity extends BaseActivity {
     private int mStatusBarColor;// 状态栏颜色
     private boolean flag_drawer = false;// 抽屉打开状态标志位，true：打开，false：关闭
 
+    private NfcAdapter nfcAdapter = null;
+
+    private PendingIntent mpendingIntent;
+    private IntentFilter[] mInterFilter;
+    private String[][] mTechLists;
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            String s = (String )msg.obj;
+            Toast.makeText(MainActivity.this,s,Toast.LENGTH_LONG).show();
+            Intent intents = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(intents);
+        }
+    };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
+        nfcAdapter = nfcAdapter.getDefaultAdapter(this);
+        mpendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
+        isEnabled();
+
+
         initView();
         initEvent();
+
+
+    }
+    /**
+     * 手机NFC功能是否可用
+     */
+    public void isEnabled() {
+
+        if (nfcAdapter == null) {
+//            Snackbar.make(null,"该设备不支持NFC功能", Snackbar.LENGTH_SHORT).show();
+            finish();
+        } else if (!nfcAdapter.isEnabled()) {
+            //打开设置NFC开关
+            Intent setNfc = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+            startActivity(setNfc);
+        }
+    }
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
+            byte[] myNFCId = intent.getByteArrayExtra(nfcAdapter.EXTRA_ID);
+            String m = ByteArrayToHexString(myNFCId);
+
+            Message msg = handler.obtainMessage();
+            msg.obj = m;
+            handler.sendMessage(msg);
+        }
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (nfcAdapter != null) {
+            nfcAdapter.enableForegroundDispatch(this, mpendingIntent, mInterFilter, mTechLists);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (nfcAdapter != null)
+            nfcAdapter.disableForegroundDispatch(this);}
+
+    private String ByteArrayToHexString(byte[] inarray) { // converts byte arrays to string
+        int i, j, in;
+        String[] hex = {
+                "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"
+        };
+        String out = "";
+
+        for (j = 0; j < inarray.length; ++j) {
+            in = inarray[j] & 0xff;
+            i = (in >> 4) & 0x0f;
+            out += hex[i];
+            i = in & 0x0f;
+            out += hex[i];
+        }
+        return out;
     }
 
     private void initView() {
@@ -103,7 +191,7 @@ public class MainActivity extends BaseActivity {
      * 判断有无登录人员的路线任务
      */
     public boolean isChecker() {
-        //TODO d有无登录人员的路线任务
+        //TODO 有无登录人员的路线任务
         return true;
     }
 

@@ -48,9 +48,10 @@ public class RouterFragmentAdapter extends RecyclerView.Adapter<RouterFragmentAd
             //TODO 标牌个数出错
         }
 
-        holder.tv_router.setText(routerBeanList.get(pos).getRouterName());
-        holder.tv_sign_check_count.setText(routerBeanList.get(pos).getSignCheckCounts() + "/");
+        holder.tv_router.setText(routerBeanList.get(pos).getRouterName());//匹配路线名
+        holder.tv_sign_check_count.setText(routerBeanList.get(pos).getSignCheckCounts() + "/");//已检标牌的个数
         holder.tv_sign_counts.setText(routerBeanList.get(pos).getSignCounts());
+
     }
 
 

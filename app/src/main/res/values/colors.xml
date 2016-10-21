@@ -3,7 +3,7 @@
 
     <color name="colorPrimary">#cd3e3a</color>
     <color name="colorPrimaryDark">#cd3e3a</color>
-    <color name="colorAccent">#ffffff</color>
+    <color name="colorAccent">#37cdcd</color>
 
     <!-- Common -->
     <color name="white">#ffffff</color>
@@ -32,7 +32,7 @@
     <color name="color_router_lv_item_bg_sel">#dcdcdc</color>
     <color name="color_router_lv_text_nor">#696969</color>
     <color name="color_router_lv_text_light">#37cdcd</color>
-    
+
     <!-- MeasureFragment -->
     <color name="color_fab_bg">#cd3e3a</color>
     <color name="color_measure_title_divider">#dcdcdc</color>
@@ -48,6 +48,11 @@
     <color name="color_pop_window_item_sel">#dcdcdc</color>
     <color name="color_pop_window_text">#696969</color>
 
-
+    <!-- SignActivity -->
+    <color name="color_sign_title_view_bg">#cd3a3a</color>
+    <color name="color_sign_title_text">#ffffff</color>
+    <color name="color_sign_list_title">#696969</color>
+    <color name="color_sign_list_detail">#b3b3b3</color>
+    <color name="color_sign_in_place">#cd3a3a</color>
 
 </resources>

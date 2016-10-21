@@ -39,4 +39,12 @@
     <string name="win_bottom_meter_reading">抄表</string>
     <string name="win_bottom_record">记录</string>
     
+    <!-- SignActivity -->
+    <string name="sign_title">标牌：</string>
+    <string name="sign_machine_title">设备：</string>
+    <string name="sign_check_item_title">检测项：</string>
+    <style name="sign_force_sequence">强制次序</style>
+    <string name="sign_inverted_sequence">反向排序</string>
+    
+    
 </resources>

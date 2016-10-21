@@ -5,9 +5,9 @@ package com.aritime.aridj.main.router.bean;
  */
 
 public class Routerbean {
-    private String routerName;
-    private String signCheckCounts;
-    private String signCounts;
+    private String routerName;//路线名
+    private String signCheckCounts;//路线已检标牌个数
+    private String signCounts;//路线标牌总数
 
     public Routerbean(String routerName, String signCheckCounts, String signCounts) {
         this.routerName = routerName;
