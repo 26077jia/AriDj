@@ -33,49 +33,33 @@
             android:layout_gravity="center_vertical"
             android:layout_toRightOf="@id/img_back_router"
             android:ellipsize="end"
-            android:lines="1"
-            android:maxEms="4"
-            android:text="车间一车间一车间一车间一"
+            android:text="数据管理"
             android:textColor="@color/color_sign_title_text"
             android:textSize="16sp"
             android:layout_marginTop="2dp"
 
             />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sign_title"
-                android:textColor="@color/color_sign_title_text"
-                android:textSize="16sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3/8"
-                android:textColor="@color/color_sign_title_text"
-                android:textSize="16sp"
-                />
-        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btn_setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/icon_setting"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            />
+        <ImageButton
+            android:id="@+id/btn_filter"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/icon_filter"
+            android:background="@null"
+            android:layout_toLeftOf="@id/btn_setting"
+            android:layout_marginRight="24dp"/>
 
     </RelativeLayout>
 
-    <ExpandableListView
-        android:id="@+id/elv_sign"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:groupIndicator="@null"
-        android:divider="@null"
-        ></ExpandableListView>
+
 
 </LinearLayout>

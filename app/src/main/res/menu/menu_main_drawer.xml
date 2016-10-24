@@ -55,7 +55,7 @@
          &lt;!&ndash;<item
 
              android:id="@+id/drawer_setting"
-             android:icon="@mipmap/icon_setting"
+             android:icon="@mipmap/icon_setting_red"
              android:title="@string/drawer_setting" />&ndash;&gt;
          <item
              android:id="@+id/drawer_about"

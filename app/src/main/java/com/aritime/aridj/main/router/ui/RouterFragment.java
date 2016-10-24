@@ -1,5 +1,6 @@
 package com.aritime.aridj.main.router.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import com.aritime.aridj.R;
 import com.aritime.aridj.main.router.adapter.RouterFragmentAdapter;
 import com.aritime.aridj.main.router.bean.Routerbean;
+import com.aritime.aridj.sign.SignListViewActivity;
 
 import java.util.ArrayList;
 
@@ -19,7 +21,7 @@ import java.util.ArrayList;
  * Created by jiajia on 2016/10/12.
  */
 
-public class RouterFragment extends Fragment {
+public class RouterFragment extends Fragment  {
     private RecyclerView rv_router;
     private RouterFragmentAdapter routerAdapter;
     private ArrayList<Routerbean> routerBeanList =new ArrayList<Routerbean>();
@@ -45,13 +47,24 @@ public class RouterFragment extends Fragment {
         rv_router = (RecyclerView) view.findViewById(R.id.rv_router);
         rv_router.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+
         routerBeanList.add(new Routerbean("车间一","2","4"));
         routerBeanList.add(new Routerbean("车间一","4","4"));
         routerBeanList.add(new Routerbean("车间一","3","4"));
         routerBeanList.add(new Routerbean("车间一","2","2"));
 
         routerAdapter = new RouterFragmentAdapter(getActivity(),routerBeanList);
+
+
         rv_router.setAdapter(routerAdapter);
+        routerAdapter.setOnItemClickListener(new RouterFragmentAdapter.OnRecyclerViewItemClickListener(){
+            @Override
+            public void onItemClick(View view , String data){
+                Intent intent = new Intent(getActivity(), SignListViewActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
+
 }

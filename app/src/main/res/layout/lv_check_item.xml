@@ -2,6 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:paddingBottom="8dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:layout_marginLeft="14dp"
                 android:gravity="center_vertical">
     <TextView
         android:id="@+id/tv_sign_check_item"
@@ -9,6 +13,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:text="【速度】北侧"
+        android:textColor="@color/color_sign_checkitem_name"
         />
     <ImageView
         android:layout_width="wrap_content"
@@ -28,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="小姑不错"
+            android:text="123"
             android:lines="1"
             android:ellipsize="end"
             android:maxEms="3"/>

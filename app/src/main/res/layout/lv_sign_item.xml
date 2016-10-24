@@ -1,104 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:gravity="center_vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
     >
 
-    <ImageView
-        android:id="@+id/img_sign_detail"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_marginRight="8dp"
-        android:src="@mipmap/icon_sign_detail"
-        />
-
-    <TextView
-        android:id="@+id/tv_sign_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/img_sign_detail"
-        android:lines="1"
-        android:maxEms="8"
-        android:text="车间一"
-        android:textColor="@color/color_sign_list_title"
-        android:textSize="16sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
-
-    <ImageView
-        android:id="@+id/img_sign_icon_up"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_toRightOf="@id/tv_sign_name"
-        android:src="@mipmap/icon_up"/>
-
-    <TextView
-        android:id="@+id/tv_sing_machine_title"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
 
-        android:layout_toRightOf="@id/img_sign_icon_up"
-        android:text="@string/sign_machine_title"
-        android:textColor="@color/color_sign_list_detail"
-        android:textSize="12sp"
-        />
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        >
 
-    <TextView
-        android:id="@+id/tv_sign_machine_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/tv_sing_machine_title"
-        android:text="2/2"
-        android:textColor="@color/color_sign_list_detail"
-        android:textSize="12sp"
+        <ImageView
+            android:id="@+id/img_sign_detail"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/icon_sign_detail"
 
-        />
+            />
 
-    <TextView
-        android:id="@+id/tv_sign_check_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
-        android:layout_toRightOf="@id/tv_sign_machine_count"
-        android:text="@string/sign_check_item_title"
-        android:textColor="@color/color_sign_list_detail"
-        android:textSize="12sp"
-        />
+        <TextView
+            android:id="@+id/tv_sign_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_sign_detail"
+            android:lines="1"
+            android:maxEms="15"
+            android:text="车间一车间一车间一车间一"
+            android:textColor="@color/color_sign_list_title"
+            android:textSize="16sp"
 
-    <TextView
-        android:id="@+id/tv_sign_check_item_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/tv_sign_check_title"
-        android:text="17/17"
-        android:textColor="@color/color_sign_list_detail"
-        android:textSize="12sp"
+            />
 
-        />
 
-    <TextView
-        android:id="@+id/tv_in_place"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="需到位"
-        android:textColor="@color/color_sign_in_place"
-        android:textSize="12sp"
-        android:layout_toRightOf="@id/tv_sign_check_item_count"
-        android:layout_marginLeft="12dp"
-        />
+        <ImageView
+            android:id="@+id/img_sign_icon_up"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_toRightOf="@id/tv_sign_name"
+            android:src="@mipmap/icon_up"/>
 
-    <ImageView
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_alignParentRight="true"
-        android:src="@mipmap/icon_checked"
-        />
+        <ImageView
+            android:id="@+id/img_sign_checked"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_checked"
+            />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tv_in_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@id/img_sign_checked"
+            android:text="需到位"
+            android:textColor="@color/color_sign_in_place"
+            android:textSize="12sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/tv_sing_machine_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/sign_machine_title"
+            android:textColor="@color/color_sign_list_detail"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_sign_machine_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_sing_machine_title"
+            android:text="2/2"
+            android:textColor="@color/color_sign_list_detail"
+            android:textSize="12sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_sign_check_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/tv_sign_machine_count"
+            android:text="@string/sign_check_item_title"
+            android:textColor="@color/color_sign_list_detail"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_sign_check_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_sign_check_title"
+            android:text="17/17"
+            android:textColor="@color/color_sign_list_detail"
+            android:textSize="12sp"
+
+            />
+
+    </RelativeLayout>
+</LinearLayout>

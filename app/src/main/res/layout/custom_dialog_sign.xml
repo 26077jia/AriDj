@@ -1,50 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    >
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@color/colorPrimary"
-        android:layout_margin="20dp"
+        android:layout_height="372dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="80dp"
+        android:layout_gravity="top"
+        android:background="@color/white"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
             >
+
             <TextView
                 android:id="@+id/tv_dialog_sign_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
                 android:text="水泵房"
+                android:textColor="@color/color_dialog_sign_name"
+                android:textSize="16sp"
                 />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="设备数："/>
+                android:text="设备数："
+                android:textColor="@color/color_dialog_sign_detail"
+                android:textSize="12sp"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3"/>
+                android:text="3"
+                android:textColor="@color/color_dialog_sign_detail"
+                android:textSize="12sp"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="检测数："/>
+                android:layout_marginLeft="14dp"
+                android:text="检测项："
+                android:textColor="@color/color_dialog_sign_detail"
+                android:textSize="12sp"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="17"/>
+                android:text="17"
+                android:textColor="@color/color_dialog_sign_detail"
+                android:textSize="12sp"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_dialog_divide"
+            ></LinearLayout>
+
+        <ExpandableListView
+            android:layout_width="match_parent"
+            android:layout_height="276dp"
+            android:divider="@null"
+            >
+
+        </ExpandableListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_dialog_divide"
+            ></LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            >
+
+            <ImageButton
+                android:id="@+id/imgbtn_enter_measure"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:background="@null"
+                android:src="@mipmap/icon_enter_red"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/imgbtn_enter_measure"
+                android:text="进入点检"
+                android:textColor="@color/color_dialog_enter_measure"
+                android:textSize="16sp"
+
+                />
+        </RelativeLayout>
 
     </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/icon_rotate_speed"
-        android:layout_gravity="right|top"/>
+        android:layout_gravity="right|top"
+        android:layout_marginRight="16dp"
+        android:src="@mipmap/icon_close"
+        />
 
 </FrameLayout>

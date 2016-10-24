@@ -19,14 +19,21 @@ import java.util.List;
  * Created by jiajia on 2016/10/13.
  */
 
-public class RouterFragmentAdapter extends RecyclerView.Adapter<RouterFragmentAdapter.RouterVH> {
+public class RouterFragmentAdapter extends RecyclerView.Adapter<RouterFragmentAdapter.RouterVH> implements View.OnClickListener {
     private Context context;
     private List<Routerbean> routerBeanList;
+    private OnRecyclerViewItemClickListener mOnItemClickListener = null;
+
+    //define interface
+    public static interface OnRecyclerViewItemClickListener {
+        void onItemClick(View view , String data);
+    }
 
     public RouterFragmentAdapter(Context context, ArrayList<Routerbean> routerBeanList) {
         this.context = context;
         this.routerBeanList = routerBeanList;
     }
+
 
     @Override
     public long getItemId(int pos) {
@@ -39,7 +46,7 @@ public class RouterFragmentAdapter extends RecyclerView.Adapter<RouterFragmentAd
     }
 
     @Override
-    public void onBindViewHolder(RouterVH holder, int pos) {
+    public void onBindViewHolder(final RouterVH holder, int pos) {
         int routerCheckCounts = Integer.parseInt(routerBeanList.get(pos).getSignCheckCounts());
         int routerCounts = Integer.parseInt(routerBeanList.get(pos).getSignCounts());
         if (routerCheckCounts == routerCounts) {// 检测项全部完成文本颜色设置为高亮
@@ -52,13 +59,28 @@ public class RouterFragmentAdapter extends RecyclerView.Adapter<RouterFragmentAd
         holder.tv_sign_check_count.setText(routerBeanList.get(pos).getSignCheckCounts() + "/");//已检标牌的个数
         holder.tv_sign_counts.setText(routerBeanList.get(pos).getSignCounts());
 
+
     }
 
 
     @Override
     public RouterVH onCreateViewHolder(ViewGroup parent, int viewType) {
-        RouterVH holder = new RouterVH(LayoutInflater.from(context).inflate(R.layout.lv_router_item, parent, false));
-        return holder;//设置列表项的样式
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lv_router_item, parent, false);
+        RouterVH vh = new RouterVH(view);
+        //将创建的View注册点击事件
+        view.setOnClickListener(this);
+        return vh;//设置列表项的样式
+    }
+    @Override
+    public void onClick(View v) {
+        if (mOnItemClickListener != null) {
+            //注意这里使用getTag方法获取数据
+            mOnItemClickListener.onItemClick(v,(String)v.getTag());
+        }
+    }
+
+    public void setOnItemClickListener(OnRecyclerViewItemClickListener listener) {
+        this.mOnItemClickListener = listener;
     }
 
     public static class RouterVH extends RecyclerView.ViewHolder {

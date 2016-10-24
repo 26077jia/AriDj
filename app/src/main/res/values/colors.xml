@@ -54,5 +54,15 @@
     <color name="color_sign_list_title">#696969</color>
     <color name="color_sign_list_detail">#b3b3b3</color>
     <color name="color_sign_in_place">#cd3a3a</color>
+    <color name="color_sign_machine_name">#696969</color>
+    <color name="color_sign_checkitem_name">#b3b3b3</color>
+
+    <!-- DialogSign-->
+    <color name="color_dialog_divide">#ededed</color>
+    <color name="color_dialog_sign_name">#696969</color>
+    <color name="color_dialog_sign_detail">#b3b3b3</color>
+    <color name="color_dialog_machine_name">#696969</color>
+    <color name="color_dialog_check_item">#b3b3b3</color>
+    <color name="color_dialog_enter_measure">#cd3a3a</color>
 
 </resources>

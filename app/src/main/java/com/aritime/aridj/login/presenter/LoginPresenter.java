@@ -4,7 +4,6 @@ package com.aritime.aridj.login.presenter;
 import android.text.TextUtils;
 
 import com.aritime.aridj.login.contract.LoginContract;
-import com.aritime.aridj.utils.NfcCardReader;
 
 /**
  * Created by jiajia on 2016/10/18.
@@ -42,12 +41,12 @@ public class LoginPresenter implements LoginContract.Presenter {
     @Override
     public void cardLogin() {
 
-        if (!TextUtils.isEmpty(NfcCardReader.getNfcCardId())) {
-            getInfo();
-            mView.loginSuccess();
-        } else {
-            mView.loginFailed("请刷卡！");
-        }
+//        if (!TextUtils.isEmpty(NfcCardReader.getNfcCardId())) {
+//            getInfo();
+//            mView.loginSuccess();
+//        } else {
+//            mView.loginFailed("请刷卡！");
+//        }
 
     }
 
