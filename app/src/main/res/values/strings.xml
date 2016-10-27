@@ -80,4 +80,25 @@
     <string name="account_btn_sync">同  步</string>
     <string name="account_btn_change">修  改</string>
 
+    <!-- SettingActivity -->
+    <string name="set_title">设置</string>
+    <string name="set_communicate">通讯设置</string>
+    <string name="set_server_address">服务器地址</string>
+    <string name="set_auto_upload">自动上传</string>
+    <string name="set_wifi_upload">Wifi自动上传</string>
+    <string name="set_auto_download">自动下载</string>
+    <string name="set_wifi_download">Wifi自动下载</string>
+    <string name="set_spot_check">点检仪设置</string>
+    <string name="set_battery_saving">开启省电模式</string>
+    <string name="set_transducer_sens">传感器灵敏度</string>
+    <string name="set_speed_coeffic">速度校正系数</string>
+    <string name="set_displacce_coeffic">位移校正系数</string>
+    <string name="set_temper_coeffic">温度校正系数</string>
+    <string name="set_storage">存储设置</string>
+    <string name="set_all_space">总空间：</string>
+    <string name="set_free_space">剩余空间：</string>
+    <string name="set_auto_clear">上传完毕自动清除任务和点检数据</string>
+    <string name="set_clear_task">清除任务数据</string>
+    <string name="set_clear_detect">清除检测数据</string>
+
 </resources>

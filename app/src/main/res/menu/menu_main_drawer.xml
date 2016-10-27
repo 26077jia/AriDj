@@ -16,6 +16,12 @@
             android:id="@+id/drawer_data_updating"
             android:icon="@mipmap/ic_data_update"
             android:title="@string/drawer_data_updating" />
+
+        <item
+            android:id="@+id/drawer_picture"
+            android:title="拍照">
+
+        </item>
         <item
             android:id="@+id/drawer_data_query"
             android:icon="@mipmap/ic_data_query"

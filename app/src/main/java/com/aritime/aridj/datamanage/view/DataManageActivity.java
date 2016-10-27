@@ -1,7 +1,7 @@
 package com.aritime.aridj.datamanage.view;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.aritime.aridj.R;
@@ -12,8 +12,8 @@ import com.aritime.aridj.R;
 
 public class DataManageActivity extends AppCompatActivity{
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.act_data_manage);
     }
 }

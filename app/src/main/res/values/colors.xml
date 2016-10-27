@@ -5,10 +5,15 @@
     <color name="colorPrimaryDark">#cd3e3a</color>
     <color name="colorAccent">#37cdcd</color>
 
-    <color name="cl_app_title_bg">#cd3a3a</color>
+    <color name="cl_app_title_bg">#cd3e3a</color>
     <color name="cl_app_title_text">#ffffff</color>
-    <color name="cl_app_bottom_bg">#cd3a3a</color>
+    <color name="cl_app_bottom_bg">#cd3e3a</color>
     <color name="cl_app_bottom_text">#ffffff</color>
+    <color name="cl_act_bg">#f6f6f6</color>
+    <color name="cl_act_module_bg">#ffffff</color>
+    <color name="cl_act_divide">#ededed</color>
+    <color name="cl_btn_red_stroke_text">#cd3e3a</color>
+    <color name="cl_btn_red_stroke_sel">#f4443f</color>
 
 
     <!-- Common -->
@@ -22,7 +27,7 @@
 
     <!-- NavigationView-->
     <color name="color_nav_bg">#efefef</color>
-    <color name="color_nav_dividers_bottoom">#efefef</color>
+    <color name="color_nav_divider_bottoom">#efefef</color>
     <color name="color_nav_btn_font">#404040</color>
     <color name="color_nav_btn_nor">#ffffff</color>
     <color name="color_nav_btn_sel">#dcdcdc</color>
@@ -96,7 +101,12 @@
     <color name="color_account_sub_title">#696969</color>
     <color name="color_account_detail">#cccccc</color>
     <color name="color_account_et_light">#37cdcd</color>
-    <color name="color_account_btn_text">#cd3a3a</color>
-    <color name="color_account_btn_text_sel">#f4443f</color>
+
+
+    <!-- SettingActivity -->
+    <color name="cl_set_module_title">#dcdcdc</color>
+    <color name="cl_set_module_sub_title">#696969</color>
+    <color name="cl_set_module_detail">#cccccc</color>
+    <color name="cl_set_text_light">#f56662</color>
 
 </resources>

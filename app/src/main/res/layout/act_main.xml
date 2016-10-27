@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:layout_marginTop="12dp"
-                android:background="@color/color_nav_dividers_bottoom">
+                android:background="@color/color_nav_divider_bottoom">
 
             </LinearLayout>
 

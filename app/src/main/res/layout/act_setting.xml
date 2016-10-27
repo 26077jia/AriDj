@@ -1,7 +1,601 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
 
-</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cl_act_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="top"
+            android:layout_marginBottom="8dp"
+            android:background="@color/cl_app_title_bg"
+            android:gravity="center_vertical"
+            >
+
+            <ImageButton
+
+                android:id="@+id/imgBtn_setting_back_main"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@null"
+                android:src="@mipmap/ic_back"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_sc_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/imgBtn_setting_back_main"
+                android:text="@string/set_title"
+                android:textColor="@color/color_data_manager_title"
+                android:textSize="16sp"
+
+                />
+
+            <ImageButton
+                android:id="@+id/btn_sc_setting"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:background="@null"
+                android:src="@mipmap/ic_setting"
+                />
+
+
+        </RelativeLayout>
+
+        <!-- 通讯设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/cl_act_module_bg"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_communicate"
+                    android:textColor="@color/cl_set_module_title"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_account_divide"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_sever_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_server_address"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="16sp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_server_edit"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:src="@mipmap/ic_edit"
+                    />
+
+                <EditText
+                    android:id="@+id/et_server_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btn_server_edit"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:paddingTop="16dp"
+                    android:text="192.168.0.1"
+                    android:textColor="@color/color_account_detail"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cl_act_divide"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/cl_act_module_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/set_auto_upload"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="16sp"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/sw_auto_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    app:track="@drawable/switch_track"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cl_act_divide"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/cl_act_module_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/set_wifi_upload"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="16sp"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/sw_bluetooth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    app:track="@drawable/switch_track"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cl_act_divide"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/cl_act_module_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/set_auto_download"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="16sp"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/sw_auto_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    app:track="@drawable/switch_track"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cl_act_divide"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/cl_act_module_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/set_wifi_download"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="16sp"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/sw_wifi_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    app:track="@drawable/switch_track"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- 点检仪设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/cl_act_module_bg"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_spot_check"
+                    android:textColor="@color/cl_set_module_title"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_account_divide"></LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/cl_act_module_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/set_battery_saving"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="16sp"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/sw_battery_saving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    app:track="@drawable/switch_track"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cl_act_divide"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_transducer_sens"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="16sp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_transducer_edit"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:src="@mipmap/ic_edit"
+                    />
+
+                <EditText
+                    android:id="@+id/et_transducer_coeffic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btn_transducer_edit"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:paddingTop="17dp"
+                    android:text="191"
+                    android:textColor="@color/cl_set_module_detail"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cl_act_divide"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_displace_coeffic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_displacce_coeffic"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="16sp"/>
+
+                <ImageButton
+                    android:id="@+id/ImgBtn_displace_edit"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:src="@mipmap/ic_edit"
+                    />
+
+                <EditText
+                    android:id="@+id/et_displace_coeffic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/ImgBtn_displace_edit"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:paddingTop="17dp"
+                    android:text="1.1"
+                    android:textColor="@color/color_account_detail"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cl_act_divide"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_temper_coeffic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/set_temper_coeffic"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="16sp"/>
+
+                <ImageButton
+                    android:id="@+id/ImgBtn_temper_edit"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:src="@mipmap/ic_edit"
+                    />
+
+                <EditText
+                    android:id="@+id/et_temper_coeffic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/ImgBtn_temper_edit"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:paddingTop="17dp"
+                    android:text="92.1"
+                    android:textColor="@color/color_account_detail"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cl_act_divide"></LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- 存储设置 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/cl_act_module_bg">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/set_storage"
+                    android:textColor="@color/cl_set_module_title"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_free_space_numeric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="1.8G"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/cl_set_text_light"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_free_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/tv_free_space_numeric"
+                    android:text="@string/set_free_space"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_all_space_numeric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24dp"
+                    android:layout_toLeftOf="@id/tv_free_space"
+                    android:text="1.8G"
+                    android:textColor="@color/cl_set_text_light"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_all_space"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/tv_all_space_numeric"
+                    android:text="@string/set_all_space"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="14sp"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cl_act_divide"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/cl_act_module_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="32dp"
+                    android:text="@string/set_auto_clear"
+                    android:textColor="@color/cl_set_module_sub_title"
+                    android:textSize="16sp"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/sw_auto_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    app:track="@drawable/switch_track"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cl_act_divide"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <Button
+                    android:id="@+id/btn_clear_detect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/btn_red_stroke"
+                    android:text="@string/set_clear_detect"
+                    android:textColor="@color/cl_btn_red_stroke_text"
+                    android:textSize="14sp"/>
+
+                <Button
+                    android:id="@+id/btn_clear_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toLeftOf="@id/btn_clear_detect"
+                    android:background="@drawable/btn_red_stroke"
+                    android:text="@string/set_clear_detect"
+                    android:textColor="@color/cl_btn_red_stroke_text"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

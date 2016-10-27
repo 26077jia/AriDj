@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.aritime.aridj.R;
 import com.aritime.aridj.accountmanage.view.AccountManageActivity;
 import com.aritime.aridj.base.BaseActivity;
+import com.aritime.aridj.cardreader.CardReaderActivity;
 import com.aritime.aridj.datamanage.view.DataManageActivity;
 import com.aritime.aridj.dataupdate.view.DataUpdateActivity;
 import com.aritime.aridj.main.adapter.MyFragmentPagerAdapter;
@@ -207,6 +208,7 @@ public class MainActivity extends BaseActivity {
         mNavView.findViewById(R.id.btn_exit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                System.exit(0);
             }
         });
 
@@ -227,9 +229,18 @@ public class MainActivity extends BaseActivity {
                 startActivity(intentDUA);
                 break;
             case R.id.drawer_data_query:
+                //TODO 进入“数据查询”页面
 //                Intent intent = new Intent(MainActivity.this,);
 //                startActivity(intent);
-//                break;
+                break;
+            case R.id.drawer_picture:
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                startActivityForResult(intent, 0);
+                break;
+            case R.id.drawer_card_reader:
+                Intent intentCRA = new Intent(MainActivity.this, CardReaderActivity.class);
+                startActivity(intentCRA);
+                break;
             case R.id.drawer_spot_check:
                 Intent intentSCA = new Intent(MainActivity.this, SpotCheckActivity.class);
                 startActivity(intentSCA);
@@ -239,6 +250,7 @@ public class MainActivity extends BaseActivity {
                 startActivity(intentAMA);
                 break;
             case R.id.drawer_about:
+                //TODO 进入“关于”页面
 //                Intent intentAA = new Intent(MainActivity.this, AboutActivity.class);
 //                startActivity(intentAA);
 //                break;

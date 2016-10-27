@@ -4,6 +4,10 @@
 
     <!-- NFC权限声明 -->
     <uses-permission android:name="android.permission.NFC"/>
+    <!-- 拍照权限申明 -->
+    <uses-feature android:name="android.hardware.camera"
+                  android:required="true" />
+    <!-- 录音权限申明 -->
 
     <application
         android:allowBackup="true"

@@ -83,9 +83,9 @@ android:background="@color/cl_cr_module_bg"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/btn_acount"
+            android:background="@drawable/btn_red_stroke"
             android:text="@string/account_btn_sync"
-            android:textColor="@color/color_account_btn_text"
+            android:textColor="@color/cl_btn_red_stroke_text"
             android:textSize="14sp"/>
     </RelativeLayout>
 </LinearLayout>

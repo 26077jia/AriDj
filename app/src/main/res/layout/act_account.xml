@@ -4,7 +4,8 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@color/color_account_bg"
-              android:orientation="vertical">
+              android:orientation="vertical"
+    >
 
     <!-- 标题栏-->
     <RelativeLayout
@@ -77,13 +78,14 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginLeft="16dp"
-            android:gravity="center_vertical">
+            >
 
             <TextView
                 android:id="@+id/tv_local_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
                 android:text="@string/account_local_name"
                 android:textColor="@color/color_account_sub_title"
                 android:textSize="16sp"/>
@@ -93,15 +95,19 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="16dp"
                 android:src="@mipmap/ic_edit"
                 />
 
-            <TextView
+            <EditText
                 android:id="@+id/btn_local_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/btn_local_info_edit"
+                android:background="@null"
+                android:focusable="false"
+                android:paddingTop="17dp"
                 android:text="My Machine"
                 android:textColor="@color/color_account_detail"
                 android:textSize="14sp"/>
@@ -122,11 +128,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/btn_acount"
+                android:background="@drawable/btn_red_stroke"
                 android:text="@string/account_btn_sync"
-                android:textColor="@color/color_account_btn_text"
+                android:textColor="@color/cl_btn_red_stroke_text"
                 android:textSize="14sp"/>
         </RelativeLayout>
     </LinearLayout>
@@ -166,6 +173,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="用户名"
+
                 app:met_floatingLabel="highlight"
                 app:met_floatingLabelText="用户名"
                 app:met_primaryColor="@color/color_account_et_light"
@@ -215,9 +223,9 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/btn_acount"
+                android:background="@drawable/btn_red_stroke"
                 android:text="@string/account_btn_change"
-                android:textColor="@color/color_account_btn_text"
+                android:textColor="@color/cl_btn_red_stroke_text"
                 android:textSize="14sp"/>
         </RelativeLayout>
     </LinearLayout>
