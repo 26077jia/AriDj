@@ -45,7 +45,7 @@ public class SignDialog extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
-        View view = inflater.inflate(R.layout.custom_dialog_sign,container,false);
+        View view = inflater.inflate(R.layout.dlg_sign,container,false);
         AnimationUtils.slideToUp(view);
         return view;
     }

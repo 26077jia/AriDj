@@ -11,20 +11,28 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-
-
         >
-        <activity android:name=".login.view.LoginActivity"
-                    >
+        <activity android:name=".login.view.LoginActivity">
+
+        </activity>
+        <activity android:name=".main.MainActivity"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".main.MainActivity"  >
-
-        </activity>
         <activity android:name=".sign.SignListViewActivity"/>
+        <activity android:name=".base.BaseActivity"/>
+        <activity android:name=".datamanage.view.DataManageActivity"/>
+        <activity android:name=".dataupdate.view.DataUpdateActivity"/>
+        <activity android:name=".spotcheck.SpotCheckActivity"/>
+
+        <activity android:name=".cardreader.CardReaderActivity"/>
+
+        <activity android:name=".accountmanage.view.AccountManageActivity"/>
+        <activity android:name=".setting.SettingActivity"/>
+
+
     </application>
 
 </manifest>

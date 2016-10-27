@@ -44,7 +44,7 @@ public class BottomDialog extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
-        View view = inflater.inflate(R.layout.custom_pop_win_bottom,container,false);
+        View view = inflater.inflate(R.layout.ppw_bottom,container,false);
         AnimationUtils.slideToUp(view);
         return view;
     }

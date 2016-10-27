@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_spot_check_bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="top"
+        android:layout_marginBottom="8dp"
+        android:background="@color/cl_app_title_bg"
+        android:gravity="center_vertical"
+        >
+
+        <ImageButton
+
+            android:id="@+id/imgBtn_sc_back_main"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:src="@mipmap/ic_back"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_sc_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/imgBtn_sc_back_main"
+            android:text="@string/spot_check_title"
+            android:textColor="@color/color_data_manager_title"
+            android:textSize="16sp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/btn_sc_setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:src="@mipmap/ic_setting"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/color_sc_module_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="@string/sc_switch_bluetooth"
+            android:textColor="@color/color_sc_module_title"
+            android:textSize="16sp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/sw_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            app:track="@drawable/switch_track"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/color_sc_module_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="@string/sc_switch_auto_link"
+            android:textColor="@color/color_sc_module_title"
+            android:textSize="16sp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/sw_auto_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            app:track="@drawable/switch_track"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/color_sc_module_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="@string/sc_match_machine"
+                android:textColor="@color/color_sc_module_title"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_sc_divide"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/color_sc_module_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="@string/sc_available_machine"
+                android:textColor="@color/color_sc_module_title"
+                android:textSize="16sp"/>
+
+            <ImageButton
+                android:id="@+id/imgBtn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@mipmap/ic_search"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_sc_divide"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -26,4 +26,15 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/color_tab_txt</item>
     </style>
+
+    <style name="MySwitch" parent="Theme.AppCompat.Light">
+        <!--  switch打开时按钮的颜色及轨道颜色 (30% transparency) -->
+        <item name="colorControlActivated">@color/colorAccent</item>
+
+        <!-- switch 关闭时按钮的颜色 -->
+        <item name="colorSwitchThumbNormal">@color/gray</item>
+
+        <!-- switch 关闭时的颜色 (30% transparency) -->
+        <item name="android:colorForeground">@color/gray</item>
+    </style>
 </resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/cl_card_read_bg"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="top"
+        android:layout_marginBottom="8dp"
+        android:background="@color/cl_app_title_bg"
+        >
+
+        <ImageButton
+
+            android:id="@+id/imgBtn_cr_back_main"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:src="@mipmap/ic_back"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_cr_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/imgBtn_cr_back_main"
+            android:ellipsize="end"
+            android:text="@string/card_read_title"
+            android:textColor="@color/color_data_manager_title"
+            android:textSize="16sp"
+            android:layout_marginTop="2dp"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/cl_cr_module_bg"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cr_card_title"
+            android:textColor="@color/cl_cr_title"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cr_read_tint"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/cl_cr_detail"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cl_cr_divide"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:background="@color/cl_cr_module_bg"
+        >
+
+        <Button
+            android:id="@+id/btn_sync_cr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_acount"
+            android:text="@string/account_btn_sync"
+            android:textColor="@color/color_account_btn_text"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+</LinearLayout>

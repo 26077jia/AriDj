@@ -39,7 +39,7 @@
             app:met_floatingLabelTextSize="16sp"
             app:met_floatingLabelText=""
 
-            app:met_iconLeft="@mipmap/icon_user_normal"
+            app:met_iconLeft="@mipmap/ic_user_normal"
             app:met_primaryColor="#02fdff" />
 
 
@@ -56,7 +56,7 @@
             app:met_floatingLabel="normal"
             app:met_floatingLabelTextSize="16sp"
             app:met_floatingLabelText=""
-            app:met_iconLeft="@mipmap/icon_pwd_normal"
+            app:met_iconLeft="@mipmap/ic_pwd_normal"
             app:met_primaryColor="#02fdff" />
 
         <CheckBox
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="14dp"
-                    android:src="@mipmap/icon_card_login" />
+                    android:src="@mipmap/ic_card_login" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -137,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="14dp"
-                    android:src="@mipmap/icon_nouser" />
+                    android:src="@mipmap/ic_nouser" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -148,17 +148,25 @@
 
         </LinearLayout>
     </RelativeLayout>
-   <!-- <LinearLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white">
-        <com.rey.material.widget.Switch
+   <!--     <com.rey.material.widget.Switch
             style="@style/Material.Widget.Switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:checked="false"
+            />-->
+        <android.support.v7.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:switchMinWidth="40dp"
+            app:track="@drawable/switch_track"
+            android:checked="true"
+            android:theme="@style/MySwitch"/>
+    </LinearLayout>
 
-            />
-    </LinearLayout>-->
 </LinearLayout>

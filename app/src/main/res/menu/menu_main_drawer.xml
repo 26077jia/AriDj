@@ -10,28 +10,32 @@
         <item
             android:id="@+id/drawer_data_manage"
             app:actionLayout="@layout/custom_tint_view"
-            android:icon="@mipmap/icon_data_manage"
+            android:icon="@mipmap/ic_data_manage"
             android:title="@string/drawer_data_manage" />
         <item
             android:id="@+id/drawer_data_updating"
-            android:icon="@mipmap/icon_data_updating"
+            android:icon="@mipmap/ic_data_update"
             android:title="@string/drawer_data_updating" />
         <item
             android:id="@+id/drawer_data_query"
-            android:icon="@mipmap/icon_data_query"
+            android:icon="@mipmap/ic_data_query"
             android:title="@string/drawer_data_query" />
 
         <item
             android:id="@+id/drawer_spot_check"
-            android:icon="@mipmap/icon_spot_check"
+            android:icon="@mipmap/ic_spot_check"
             android:title="@string/drawer_spot_check" />
         <item
             android:id="@+id/drawer_card_reader"
-            android:icon="@mipmap/icon_card_reader"
+            android:icon="@mipmap/ic_card_reader"
             android:title="@string/drawer_card_reader" />
         <item
+            android:id="@+id/drawer_account_manage"
+            android:icon="@mipmap/ic_account_manager"
+            android:title="@string/drawer_account_manage" />
+        <item
             android:id="@+id/drawer_about"
-            android:icon="@mipmap/icon_about"
+            android:icon="@mipmap/ic_about"
             android:title="@string/drawer_about" />
 
     </group>
@@ -40,11 +44,11 @@
          android:checkableBehavior="single">
          <item
              android:id="@+id/drawer_spot_check"
-             android:icon="@mipmap/icon_spot_check"
+             android:icon="@mipmap/ic_spot_check"
              android:title="@string/drawer_spot_check" />
          <item
              android:id="@+id/drawer_card_reader"
-             android:icon="@mipmap/icon_card_reader"
+             android:icon="@mipmap/ic_card_reader"
              android:title="@string/drawer_card_reader" />
 
      </group>
@@ -55,15 +59,15 @@
          &lt;!&ndash;<item
 
              android:id="@+id/drawer_setting"
-             android:icon="@mipmap/icon_setting_red"
+             android:icon="@mipmap/ic_setting_red"
              android:title="@string/drawer_setting" />&ndash;&gt;
          <item
              android:id="@+id/drawer_about"
-             android:icon="@mipmap/icon_about"
+             android:icon="@mipmap/ic_about"
              android:title="@string/drawer_about" />
         &lt;!&ndash; <item
              android:id="@+id/drawer__exit"
-             android:icon="@mipmap/icon_exit"
+             android:icon="@mipmap/ic_exit"
              android:title="@string/drawer_exit" />&ndash;&gt;
 
 

@@ -11,13 +11,14 @@
 
     <string name="open_drawer">打开抽屉</string>
     <string name="close_drawer">关闭抽屉</string>
-    
+
     <!-- slidingMenu -->
     <string name="drawer_data_manage">数据管理</string>
     <string name="drawer_data_updating">数据更新</string>
     <string name="drawer_data_query">数据查询</string>
     <string name="drawer_spot_check">点检仪</string>
     <string name="drawer_card_reader">读卡器</string>
+    <string name="drawer_account_manage">账号管理</string>
     <string name="drawer_setting">设置</string>
     <string name="drawer_about">关于</string>
     <string name="drawer_exit">退出</string>
@@ -25,26 +26,58 @@
     <!-- Tab -->
     <string name="tab_router">路  线</string>
     <string name="tab_sign">标  牌</string>
-    
+
     <!-- MeasureFragment -->
     <string name="measure_title_machine">设备</string>
     <string name="measure_title_measure_item">测量项</string>
     <string name="measure_title_part">部位</string>
     <string name="measure_title_numerical">数值</string>
-    
+
     <!-- PopWindowBottom -->
     <string name="win_bottom_rotate_speed">转速</string>
     <string name="win_bottom_temperature">温度</string>
     <string name="win_bottom_speed">速度</string>
     <string name="win_bottom_meter_reading">抄表</string>
     <string name="win_bottom_record">记录</string>
-    
+
     <!-- SignActivity -->
     <string name="sign_title">标牌：</string>
     <string name="sign_machine_title">设备：</string>
     <string name="sign_check_item_title">检测项：</string>
+
     <style name="sign_force_sequence">强制次序</style>
+
     <string name="sign_inverted_sequence">反向排序</string>
-    
-    
+
+
+    <!-- DataManageActivity -->
+    <string name="data_m_title">数据管理</string>
+    <string name="data_m_bottom_title">数据上传</string>
+
+
+    <!-- DataUpdateActivity -->
+    <string name="data_u_title">数据更新</string>
+    <string name="data_u_bottom_title">更新数据</string>
+
+
+    <!-- SpotCheckActivity -->
+    <string name="spot_check_title">点检仪</string>
+    <string name="sc_switch_bluetooth">蓝牙开关</string>
+    <string name="sc_switch_auto_link">自动连接</string>
+    <string name="sc_match_machine">已配对的设备</string>
+    <string name="sc_available_machine">可用设备</string>
+
+    <!-- NfcCardReadActivity -->
+    <string name="card_read_title">读卡器</string>
+    <string name="cr_card_title">射频卡ID</string>
+    <string name="cr_read_tint">请读卡</string>
+
+    <!-- AccountActivity -->
+    <string name="account_title">账号管理</string>
+    <string name="account_local_title">本机信息</string>
+    <string name="account_local_name">Pad 名称</string>
+    <string name="account_change_pwd_title">修改密码</string>
+    <string name="account_btn_sync">同  步</string>
+    <string name="account_btn_change">修  改</string>
+
 </resources>

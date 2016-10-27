@@ -15,7 +15,7 @@
         android:layout_marginTop="3dp"
         android:layout_alignParentLeft="true"
         android:scaleType="fitXY"
-        android:src="@mipmap/icon_router" />
+        android:src="@mipmap/ic_router" />
 
     <TextView
         android:id="@+id/tv_router_name"
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:src="@mipmap/icon_enter"
+        android:src="@mipmap/ic_enter"
         />
 
     <TextView
@@ -64,5 +64,5 @@
         android:layout_marginRight="8dp"
         android:layout_toLeftOf="@id/tv_sign_check_count"
         android:scaleType="fitXY"
-        android:src="@mipmap/icon_sign" />
+        android:src="@mipmap/ic_sign" />
 </RelativeLayout>

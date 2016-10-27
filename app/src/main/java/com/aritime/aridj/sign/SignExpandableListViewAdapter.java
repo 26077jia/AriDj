@@ -90,9 +90,9 @@ public class SignExpandableListViewAdapter extends BaseExpandableListAdapter {
         mGroupViewHolder.gtextView.setText(msign.name);
         //判断isExpanded就可以控制是按下还是关闭，同时更换图片
 //        if(isExpanded){
-//            mGroupViewHolder.img_up.setBackgroundResource(R.mipmap.icon_down);
+//            mGroupViewHolder.img_up.setBackgroundResource(R.mipmap.ic_down);
 //        }else{
-//            mGroupViewHolder.img_up.setBackgroundResource(R.mipmap.icon_up); }
+//            mGroupViewHolder.img_up.setBackgroundResource(R.mipmap.ic_up); }
         return convertView;
     }
 

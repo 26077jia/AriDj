@@ -119,7 +119,7 @@
         android:id="@+id/fab_measure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/icon_fab_plus"
+        android:src="@mipmap/ic_fab_plus"
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
         android:padding="16dp"

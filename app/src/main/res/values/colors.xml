@@ -5,6 +5,12 @@
     <color name="colorPrimaryDark">#cd3e3a</color>
     <color name="colorAccent">#37cdcd</color>
 
+    <color name="cl_app_title_bg">#cd3a3a</color>
+    <color name="cl_app_title_text">#ffffff</color>
+    <color name="cl_app_bottom_bg">#cd3a3a</color>
+    <color name="cl_app_bottom_text">#ffffff</color>
+
+
     <!-- Common -->
     <color name="white">#ffffff</color>
     <color name="gray">#cccccc</color>
@@ -49,8 +55,6 @@
     <color name="color_pop_window_text">#696969</color>
 
     <!-- SignActivity -->
-    <color name="color_sign_title_view_bg">#cd3a3a</color>
-    <color name="color_sign_title_text">#ffffff</color>
     <color name="color_sign_list_title">#696969</color>
     <color name="color_sign_list_detail">#b3b3b3</color>
     <color name="color_sign_in_place">#cd3a3a</color>
@@ -64,5 +68,35 @@
     <color name="color_dialog_machine_name">#696969</color>
     <color name="color_dialog_check_item">#b3b3b3</color>
     <color name="color_dialog_enter_measure">#cd3a3a</color>
+    
+    <!-- DataManage -->
+    <color name="color_data_manager_title">#ffffff</color>
+    <color name="color_data_detial">#696969</color>
+    <color name="color_data_sync">#37cdcd</color>
+
+    <!-- SpotCheckActivity -->
+    <color name="color_spot_check_bg">#f6f6f6</color>
+    <color name="color_sc_divide">#ededed</color>
+    <color name="color_sc_module_bg">#ffffff</color>
+    <color name="color_sc_module_title">#696969</color>
+    <color name="color_sc_module_item_text">#959595</color>
+
+    <!-- CardReadActivity -->
+    <color name="cl_card_read_bg">#f6f6f6</color>
+    <color name="cl_cr_module_bg">#ffffff</color>
+    <color name="cl_cr_divide">#ededed</color>
+    <color name="cl_cr_title">#696969</color>
+    <color name="cl_cr_detail">#cccccc</color>
+
+    <!-- AccountManage -->
+    <color name="color_account_bg">#f6f6f6</color>
+    <color name="color_account_module_bg">#ffffff</color>
+    <color name="color_account_divide">#ededed</color>
+    <color name="color_account_title">#dcdcdc</color>
+    <color name="color_account_sub_title">#696969</color>
+    <color name="color_account_detail">#cccccc</color>
+    <color name="color_account_et_light">#37cdcd</color>
+    <color name="color_account_btn_text">#cd3a3a</color>
+    <color name="color_account_btn_text_sel">#f4443f</color>
 
 </resources>

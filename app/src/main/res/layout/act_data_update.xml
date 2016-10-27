@@ -2,16 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical"
-    >
+              android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:gravity="center_vertical"
         android:layout_gravity="top"
         android:layout_marginBottom="8dp"
         android:background="@color/cl_app_title_bg"
+        android:gravity="center_vertical"
         >
 
         <ImageButton
@@ -33,32 +32,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginTop="2dp"
             android:layout_toRightOf="@id/img_back_router"
             android:ellipsize="end"
-            android:text="数据管理"
+            android:text="@string/drawer_data_updating"
             android:textColor="@color/color_data_manager_title"
             android:textSize="16sp"
-            android:layout_marginTop="2dp"
 
             />
 
         <ImageButton
-            android:id="@+id/btn_setting"
+            android:id="@+id/btn_su_setting"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@mipmap/ic_setting"
-            android:background="@null"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"
-            />
-        <ImageButton
-            android:id="@+id/btn_filter"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@mipmap/ic_filter"
             android:background="@null"
-            android:layout_toLeftOf="@id/btn_setting"
-            android:layout_marginRight="24dp"/>
+            android:src="@mipmap/ic_setting"
+            />
+
 
     </RelativeLayout>
 
@@ -77,7 +69,7 @@
         >
 
         <LinearLayout
-            android:id="@+id/ll_data_manage"
+            android:id="@+id/ll_data_update"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,14 +78,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
-                android:src="@mipmap/ic_data_upload"/>
+                android:src="@mipmap/ic_data_update_small"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/cl_app_title_text"
-                android:text="@string/data_m_bottom_title"
+                android:text="@string/data_u_bottom_title"
                 android:textSize="16sp"/>
         </LinearLayout>
     </RelativeLayout>
-
 </LinearLayout>

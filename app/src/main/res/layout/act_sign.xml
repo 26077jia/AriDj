@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:gravity="center_vertical"
-        android:background="@color/color_sign_title_view_bg"
+        android:background="@color/cl_app_title_bg"
         >
 
         <ImageButton
@@ -22,7 +22,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="8dp"
             android:background="@null"
-            android:src="@mipmap/icon_back"
+            android:src="@mipmap/ic_back"
 
             />
 
@@ -36,7 +36,7 @@
             android:lines="1"
             android:maxEms="4"
             android:text="车间一车间一车间一车间一"
-            android:textColor="@color/color_sign_title_text"
+            android:textColor="@color/cl_app_title_text"
             android:textSize="16sp"
             android:layout_marginTop="2dp"
 
@@ -54,14 +54,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sign_title"
-                android:textColor="@color/color_sign_title_text"
+                android:textColor="@color/cl_app_title_text"
                 android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3/8"
-                android:textColor="@color/color_sign_title_text"
+                android:textColor="@color/cl_app_title_text"
                 android:textSize="16sp"
                 />
         </LinearLayout>

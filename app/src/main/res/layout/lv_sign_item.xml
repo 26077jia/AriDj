@@ -21,7 +21,7 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginRight="8dp"
-            android:src="@mipmap/icon_sign_detail"
+            android:src="@mipmap/ic_sign_detail"
 
             />
 
@@ -44,14 +44,14 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_toRightOf="@id/tv_sign_name"
-            android:src="@mipmap/icon_up"/>
+            android:src="@mipmap/ic_up"/>
 
         <ImageView
             android:id="@+id/img_sign_checked"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/icon_checked"
+            android:src="@mipmap/ic_checked_blue"
             />
 
         <TextView

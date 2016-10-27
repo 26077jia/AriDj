@@ -1,5 +1,6 @@
 package com.aritime.aridj.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
@@ -9,13 +10,19 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.aritime.aridj.R;
+import com.aritime.aridj.accountmanage.view.AccountManageActivity;
 import com.aritime.aridj.base.BaseActivity;
+import com.aritime.aridj.datamanage.view.DataManageActivity;
+import com.aritime.aridj.dataupdate.view.DataUpdateActivity;
 import com.aritime.aridj.main.adapter.MyFragmentPagerAdapter;
+import com.aritime.aridj.setting.SettingActivity;
+import com.aritime.aridj.spotcheck.SpotCheckActivity;
 import com.jaeger.library.StatusBarUtil;
 
 import java.lang.reflect.Field;
@@ -179,28 +186,66 @@ public class MainActivity extends BaseActivity {
         tabLayout.setupWithViewPager(mViewPager);
         setIndicatorWidth();
 
+        //菜单列表点击事件
+        mNavView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                return menuClick(item.getItemId());
+            }
+        });
+
+        // 设置按钮点击事件
+        mNavView.findViewById(R.id.btn_setting).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentSA = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(intentSA);
+            }
+        });
+
+        // 退出按钮点击事件
+        mNavView.findViewById(R.id.btn_exit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
 
     }
+
 
     /**
-     * 判断有无登录人员的路线任务
+     * 菜单列表点击事件
      */
-    public boolean isChecker() {
-        //TODO 有无登录人员的路线任务
+    public boolean menuClick(int id) {
+        switch (id) {
+            case R.id.drawer_data_manage:
+                Intent intentDMA = new Intent(MainActivity.this, DataManageActivity.class);
+                startActivity(intentDMA);
+                break;
+            case R.id.drawer_data_updating:
+                Intent intentDUA = new Intent(MainActivity.this, DataUpdateActivity.class);
+                startActivity(intentDUA);
+                break;
+            case R.id.drawer_data_query:
+//                Intent intent = new Intent(MainActivity.this,);
+//                startActivity(intent);
+//                break;
+            case R.id.drawer_spot_check:
+                Intent intentSCA = new Intent(MainActivity.this, SpotCheckActivity.class);
+                startActivity(intentSCA);
+                break;
+            case R.id.drawer_account_manage:
+                Intent intentAMA = new Intent(MainActivity.this, AccountManageActivity.class);
+                startActivity(intentAMA);
+                break;
+            case R.id.drawer_about:
+//                Intent intentAA = new Intent(MainActivity.this, AboutActivity.class);
+//                startActivity(intentAA);
+//                break;
+        }
+        mDrawerLayout.closeDrawers();
         return true;
     }
-
-    /**
-     * 判断有无登录人员当前时间周期的路线任务
-     */
-    public boolean isCheckerCycle() {
-        //TODO 有无登录人员当前时间周期的路线任务
-        return true;
-    }
-
-
-
-
 
     /**
      * 自定义tab indicator的宽度

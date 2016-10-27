@@ -16,7 +16,7 @@
             android:id="@+id/icon_rotate_speed"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:src="@mipmap/icon_rotate_speed"
+            android:src="@mipmap/ic_rotate_speed"
             />
 
         <TextView
@@ -42,7 +42,7 @@
             android:id="@+id/icon_temperature"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:src="@mipmap/icon_temperature"
+            android:src="@mipmap/ic_temperature"
             />
 
         <TextView
@@ -68,7 +68,7 @@
             android:id="@+id/icon_speed"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:src="@mipmap/icon_speed"
+            android:src="@mipmap/ic_speed"
             />
 
         <TextView
@@ -94,7 +94,7 @@
             android:id="@+id/icon_meter_reading"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:src="@mipmap/icon_meter_reading"
+            android:src="@mipmap/ic_meter_reading"
             />
 
         <TextView
@@ -120,7 +120,7 @@
             android:id="@+id/icon_record"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:src="@mipmap/icon_record"
+            android:src="@mipmap/ic_record"
             />
 
         <TextView

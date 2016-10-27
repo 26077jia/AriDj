@@ -98,7 +98,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="16dp"
                 android:background="@null"
-                android:src="@mipmap/icon_enter_red"
+                android:src="@mipmap/ic_enter_red"
                 />
 
             <TextView
@@ -120,7 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right|top"
         android:layout_marginRight="16dp"
-        android:src="@mipmap/icon_close"
+        android:src="@mipmap/ic_close"
         />
 
 </FrameLayout>

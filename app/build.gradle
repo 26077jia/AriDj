@@ -30,5 +30,4 @@ dependencies {
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile 'com.jaeger.statusbaruitl:library:1.2.5'
     compile 'com.android.support:recyclerview-v7:24.2.1'
-    compile 'com.github.rey5137:material:1.2.4'
 }
