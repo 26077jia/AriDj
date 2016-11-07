@@ -4,6 +4,12 @@ package com.aritime.aridj.login.presenter;
 import android.text.TextUtils;
 
 import com.aritime.aridj.login.contract.LoginContract;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.List;
 
 /**
  * Created by jiajia on 2016/10/18.
@@ -22,8 +28,8 @@ public class LoginPresenter implements LoginContract.Presenter {
     @Override
     public void accountLogin() {
 
-        if (verified()) {// 账号信息b不为空
-            if (httpVerified()) {//登录验证成功
+        if (verified()) {// 账号信息不为空
+            if (LoginVerified()) {//登录验证成功
                 if (mView.isRembPwd()) {// 登录的账号信息是否保存
                     //TODO 保存账号信息
                 }
@@ -40,13 +46,14 @@ public class LoginPresenter implements LoginContract.Presenter {
      */
     @Override
     public void cardLogin() {
-
+        //TODO 读卡获取ID
 //        if (!TextUtils.isEmpty(NfcCardReader.getNfcCardId())) {
 //            getInfo();
 //            mView.loginSuccess();
 //        } else {
 //            mView.loginFailed("请刷卡！");
 //        }
+
 
     }
 
@@ -59,7 +66,7 @@ public class LoginPresenter implements LoginContract.Presenter {
     }
 
     /**
-     * 验证账号密码是否为空
+     * 验证账号密码输入框是否为空
      */
     public boolean verified() {
         if (TextUtils.isEmpty(mView.getAccount()) || TextUtils.isEmpty(mView.getPwd())) {
@@ -70,10 +77,29 @@ public class LoginPresenter implements LoginContract.Presenter {
     }
 
     /**
-     * 网路请求验证扽那个路信息
+     * 本地验证登录信息并过滤出路线
      */
-    public boolean httpVerified() {
-        //TODO 网路请求登录验证
+    public boolean LoginVerified() {
+        //TODO 登录本地验证
+
+        //获取规则包文件
+        try {
+            InputStreamReader inputReader = new InputStreamReader(mView.getActContext().getAssets().open("rule.txt"));
+            BufferedReader bufReader = new BufferedReader(inputReader);
+            String line = "";
+            String result = "";
+            while ((line = bufReader.readLine()) != null)
+                result += line;
+            //遍历查找用户所在的路线
+            Gson gson = new Gson();
+
+            String[] strings = gson.fromJson(result, String[].class);
+            List<String> stringList = gson.fromJson(result, new TypeToken<List<String>>() {
+            }.getType());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return true;
     }
 

@@ -101,4 +101,8 @@
     <string name="set_clear_task">清除任务数据</string>
     <string name="set_clear_detect">清除检测数据</string>
 
+
+    <!-- MeasureActivity -->
+    <string name="meas_previous">上一个</string>
+    <string name="meas_next">下一个</string>
 </resources>

@@ -22,7 +22,7 @@ public class MeasureFragment extends Fragment {
 
     public static MeasureFragment newInstance() {
 
-        Bundle args = new Bundle();
+//        Bundle args = new Bundle();
 //        args.putInt(MEAS_PAGE,page);
         MeasureFragment fragment = new MeasureFragment();
 //        fragment.setArguments(args);

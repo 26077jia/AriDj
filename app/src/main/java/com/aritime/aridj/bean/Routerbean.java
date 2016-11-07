@@ -1,4 +1,4 @@
-package com.aritime.aridj.main.router.bean;
+package com.aritime.aridj.bean;
 
 /**
  * Created by jiajia on 2016/10/14.

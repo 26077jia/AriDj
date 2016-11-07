@@ -36,7 +36,6 @@
     <color name="color_tab_txt">#696969</color>
     <color name="color_tab_txt_sel">#cd3e3a</color>
     <color name="color_tab_indicator">#cd3e3a</color>
-    <color name="color_tab_divider">#ededed</color>
 
     <!-- RouterFragment -->
     <color name="color_router_lv_item_bg">#f6f6f6</color>
@@ -46,7 +45,6 @@
 
     <!-- MeasureFragment -->
     <color name="color_fab_bg">#cd3e3a</color>
-    <color name="color_measure_title_divider">#dcdcdc</color>
     <color name="color_measure_title_bg">#f6f6f6</color>
     <color name="color_measure_title_text">#37cdcd</color>
     <color name="color_measure_numeric">#37cdcd</color>
@@ -67,7 +65,6 @@
     <color name="color_sign_checkitem_name">#b3b3b3</color>
 
     <!-- DialogSign-->
-    <color name="color_dialog_divide">#ededed</color>
     <color name="color_dialog_sign_name">#696969</color>
     <color name="color_dialog_sign_detail">#b3b3b3</color>
     <color name="color_dialog_machine_name">#696969</color>
@@ -81,7 +78,6 @@
 
     <!-- SpotCheckActivity -->
     <color name="color_spot_check_bg">#f6f6f6</color>
-    <color name="color_sc_divide">#ededed</color>
     <color name="color_sc_module_bg">#ffffff</color>
     <color name="color_sc_module_title">#696969</color>
     <color name="color_sc_module_item_text">#959595</color>
@@ -89,14 +85,12 @@
     <!-- CardReadActivity -->
     <color name="cl_card_read_bg">#f6f6f6</color>
     <color name="cl_cr_module_bg">#ffffff</color>
-    <color name="cl_cr_divide">#ededed</color>
     <color name="cl_cr_title">#696969</color>
     <color name="cl_cr_detail">#cccccc</color>
 
     <!-- AccountManage -->
     <color name="color_account_bg">#f6f6f6</color>
     <color name="color_account_module_bg">#ffffff</color>
-    <color name="color_account_divide">#ededed</color>
     <color name="color_account_title">#dcdcdc</color>
     <color name="color_account_sub_title">#696969</color>
     <color name="color_account_detail">#cccccc</color>
@@ -109,4 +103,9 @@
     <color name="cl_set_module_detail">#cccccc</color>
     <color name="cl_set_text_light">#f56662</color>
 
+
+    <!-- MeasureActivity -->
+    <color name="cl_measure_bottom_bg">#ffffff</color>
+    <color name="cl_measure_bottom_sel">#dcdcdc</color>
+    <color name="cl_measure_bottom_text">#696969</color>
 </resources>

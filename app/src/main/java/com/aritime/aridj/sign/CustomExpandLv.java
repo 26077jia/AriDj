@@ -9,18 +9,18 @@ import android.widget.ExpandableListView;
  * 自定义ExpandableListView 解决嵌套之下显示不全的问题
  * Created by MH on 2016/6/16.
  */
-public class CustomExpandableListView extends ExpandableListView {
+public class CustomExpandLv extends ExpandableListView {
 
 
-    public CustomExpandableListView(Context context) {
+    public CustomExpandLv(Context context) {
         super(context);
     }
 
-    public CustomExpandableListView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomExpandLv(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
-    public CustomExpandableListView(Context context, AttributeSet attrs) {
+    public CustomExpandLv(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.aritime.aridj.R;
-import com.aritime.aridj.main.router.bean.Routerbean;
+import com.aritime.aridj.bean.Routerbean;
 
 import java.util.ArrayList;
 import java.util.List;

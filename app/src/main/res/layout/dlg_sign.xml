@@ -66,7 +66,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/color_dialog_divide"
+            android:background="@color/cl_act_divide"
             ></LinearLayout>
 
         <ExpandableListView
@@ -80,7 +80,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/color_dialog_divide"
+            android:background="@color/cl_act_divide"
             ></LinearLayout>
 
         <RelativeLayout

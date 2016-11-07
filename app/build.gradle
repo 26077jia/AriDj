@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
 dependencies {
@@ -30,4 +31,5 @@ dependencies {
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile 'com.jaeger.statusbaruitl:library:1.2.5'
     compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.google.code.gson:gson:2.8.0'
 }

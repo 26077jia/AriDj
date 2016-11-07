@@ -37,7 +37,7 @@
                 android:layout_width="1dp"
                 android:layout_height="16dp"
                 android:layout_gravity="center_vertical"
-                android:background="@color/color_measure_title_divider">
+                android:background="@color/cl_act_divide">
 
             </LinearLayout>
 
@@ -60,7 +60,7 @@
                 android:layout_width="1dp"
                 android:layout_height="16dp"
                 android:layout_gravity="center_vertical"
-                android:background="@color/color_measure_title_divider">
+                android:background="@color/cl_act_divide">
 
             </LinearLayout>
 
@@ -83,7 +83,7 @@
                 android:layout_width="1dp"
                 android:layout_height="16dp"
                 android:layout_gravity="center_vertical"
-                android:background="@color/color_measure_title_divider">
+                android:background="@color/cl_act_divide">
 
             </LinearLayout>
 

@@ -1,4 +1,4 @@
-package com.aritime.aridj.sign;
+package com.aritime.aridj.bean;
 
 import java.util.List;
 

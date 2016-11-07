@@ -1,4 +1,4 @@
-package com.aritime.aridj.sign;
+package com.aritime.aridj.bean;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import java.util.List;
  */
 public class Sign {
 
-    // 大学名
+    // 标牌名
     public String name;
 
-    // 班级列表
+    // 设备名
     public List<Machine> machineList;
 }

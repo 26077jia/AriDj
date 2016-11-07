@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.aritime.aridj.R;
 import com.aritime.aridj.main.router.adapter.RouterFragmentAdapter;
-import com.aritime.aridj.main.router.bean.Routerbean;
+import com.aritime.aridj.bean.Routerbean;
 import com.aritime.aridj.sign.SignListViewActivity;
 
 import java.util.ArrayList;

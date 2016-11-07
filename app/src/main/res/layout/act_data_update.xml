@@ -15,7 +15,7 @@
 
         <ImageButton
 
-            android:id="@+id/img_back_router"
+            android:id="@+id/imgBtn_datau_back"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_alignParentLeft="true"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="2dp"
-            android:layout_toRightOf="@id/img_back_router"
+            android:layout_toRightOf="@id/imgBtn_datam_back"
             android:ellipsize="end"
             android:text="@string/drawer_data_updating"
             android:textColor="@color/color_data_manager_title"

@@ -1,67 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="vertical">
+    android:background="@color/cl_act_bg"
+    android:orientation="vertical">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/cl_act_bg"
-        android:orientation="vertical">
+        android:layout_height="48dp"
+        android:layout_gravity="top"
+        android:layout_marginBottom="8dp"
+        android:background="@color/cl_app_title_bg"
+        android:gravity="center_vertical"
+        >
 
-        <RelativeLayout
+        <ImageButton
+
+            android:id="@+id/imgBtn_setting_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:src="@mipmap/ic_back"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_sc_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/imgBtn_setting_back"
+            android:text="@string/set_title"
+            android:textColor="@color/color_data_manager_title"
+            android:textSize="16sp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/imgBtn_setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:src="@mipmap/ic_setting"
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_gravity="top"
-            android:layout_marginBottom="8dp"
-            android:background="@color/cl_app_title_bg"
-            android:gravity="center_vertical"
-            >
-
-            <ImageButton
-
-                android:id="@+id/imgBtn_setting_back_main"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentLeft="true"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="8dp"
-                android:background="@null"
-                android:src="@mipmap/ic_back"
-
-                />
-
-            <TextView
-                android:id="@+id/tv_sc_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="2dp"
-                android:layout_toRightOf="@id/imgBtn_setting_back_main"
-                android:text="@string/set_title"
-                android:textColor="@color/color_data_manager_title"
-                android:textSize="16sp"
-
-                />
-
-            <ImageButton
-                android:id="@+id/btn_sc_setting"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:background="@null"
-                android:src="@mipmap/ic_setting"
-                />
-
-
-        </RelativeLayout>
-
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <!-- 通讯设置 -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,7 +93,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/color_account_divide"></LinearLayout>
+                android:background="@color/cl_act_divide"></LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -287,7 +291,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/color_account_divide"></LinearLayout>
+                android:background="@color/cl_act_divide"></LinearLayout>
 
 
             <RelativeLayout
@@ -462,8 +466,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/cl_act_module_bg">
+            android:background="@color/cl_act_module_bg"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -474,9 +478,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
                     android:text="@string/set_storage"
                     android:textColor="@color/cl_set_module_title"
-                    android:layout_centerVertical="true"
                     android:textSize="16sp"
                     />
 
@@ -485,9 +489,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
                     android:layout_marginRight="16dp"
                     android:text="1.8G"
-                    android:layout_centerVertical="true"
                     android:textColor="@color/cl_set_text_light"
                     android:textSize="14sp"/>
 
@@ -495,9 +499,9 @@
                     android:id="@+id/tv_free_space"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_toLeftOf="@id/tv_free_space_numeric"
                     android:text="@string/set_free_space"
-                    android:layout_centerVertical="true"
                     android:textColor="@color/cl_set_module_sub_title"
                     android:textSize="14sp"/>
 
@@ -515,8 +519,8 @@
                 <TextView
                     android:id="@+id/tv_all_space"
                     android:layout_width="wrap_content"
-                    android:layout_centerVertical="true"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_marginRight="8dp"
                     android:layout_toLeftOf="@id/tv_all_space_numeric"
                     android:text="@string/set_all_space"
@@ -544,6 +548,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="32dp"
                     android:text="@string/set_auto_clear"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp"
                     android:textColor="@color/cl_set_module_sub_title"
                     android:textSize="16sp"/>
 
@@ -554,6 +560,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp"
                     app:track="@drawable/switch_track"
                     />
             </RelativeLayout>
@@ -565,7 +573,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="64dp"
                 >
 
                 <Button
@@ -573,9 +581,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
                     android:background="@drawable/btn_red_stroke"
                     android:text="@string/set_clear_detect"
                     android:textColor="@color/cl_btn_red_stroke_text"
@@ -585,9 +593,9 @@
                     android:id="@+id/btn_clear_task"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:layout_toLeftOf="@id/btn_clear_detect"
                     android:background="@drawable/btn_red_stroke"
                     android:text="@string/set_clear_detect"
@@ -595,7 +603,6 @@
                     android:textSize="14sp"/>
             </RelativeLayout>
         </LinearLayout>
-
-
-    </LinearLayout>
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
