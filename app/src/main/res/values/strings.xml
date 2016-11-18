@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AriDj</string>
+    <string name="app_name">AIS</string>
 
     <!-- LoginActivity -->
     <string name="login_pwd_hint">密码</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
@@ -33,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="2dp"
-            android:layout_toRightOf="@id/imgBtn_datam_back"
+            android:layout_toRightOf="@id/imgBtn_datau_back"
             android:ellipsize="end"
             android:text="@string/drawer_data_updating"
             android:textColor="@color/color_data_manager_title"
@@ -53,13 +54,44 @@
 
 
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/cl_act_module_bg">
 
-    <ListView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="失败重新下载"
+                android:textColor="@color/color_sc_module_title"
+                android:textSize="16sp"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/sw_bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                app:track="@drawable/switch_track"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+   <!-- <ListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-    </ListView>
+    </ListView>-->
 
     <RelativeLayout
         android:layout_width="match_parent"

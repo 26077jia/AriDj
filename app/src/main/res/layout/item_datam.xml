@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="40dp">
+    <TextView
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:textColor="#696969"
+        android:textSize="16sp"
+        android:text="2016.09.28"/>
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:textColor="#696969"
+
+        android:textSize="16sp"
+        android:text="中班"/>
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:textColor="#696969"
+        android:textSize="16sp"
+        android:text="路线"/>
+    <TextView
+    android:layout_width="88dp"
+    android:layout_height="wrap_content"
+    android:textColor="#696969"
+    android:textSize="16sp"
+    android:text="设备...."/>
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:textColor="#37cdcd"
+        android:textSize="16sp"
+        android:text="同步"/>
+
+
+
+</LinearLayout>

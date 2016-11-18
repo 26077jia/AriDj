@@ -2,21 +2,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.aritime.aridj">
 
-    <!-- NFC权限声明 -->
-    <uses-permission android:name="android.permission.NFC"/>
-    <!-- 拍照权限申明 -->
+
+    <!-- 网络相关 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <!-- 多媒体 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true"/>
-    <!-- 录音权限申明 -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- NFC权限声明 -->
+    <uses-permission android:name="android.permission.NFC"/>
 
-    <!-- 读写权限及建立文件的权限-->
+    <!-- 读写文件 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application
         android:allowBackup="true"
@@ -25,24 +35,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name=".login.view.LoginActivity">
+        <activity android:name=".activity.welcome.view.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".main.MainActivity">
+        <activity android:name=".activity.login.view.LoginActivity"/>
+        <activity android:name=".activity.main.MainActivity"/>
+        <activity android:name=".activity.sign.SignListViewActivity"/>
 
-        </activity>
-        <activity android:name=".sign.SignListViewActivity"/>
-        <activity android:name=".datamanage.view.DataManageActivity"/>
-        <activity android:name=".dataupdate.view.DataUpdateActivity"/>
-        <activity android:name=".spotcheck.SpotCheckActivity"/>
-        <activity android:name=".cardreader.CardReaderActivity"/>
-        <activity android:name=".accountmanage.view.AccountManageActivity"/>
-        <activity android:name=".setting.SettingActivity"/>
-
-
+        <activity android:name=".activity.datamanage.view.DataManageActivity"/>
+        <activity android:name=".activity.dataupdate.view.DataUpdateActivity"/>
+        <activity android:name=".activity.spotcheck.SpotCheckActivity"/>
+        <activity android:name=".activity.cardreader.CardReaderActivity"/>
+        <activity android:name=".activity.accountmanage.view.AccountManageActivity"/>
+        <activity android:name=".activity.setting.SettingActivity"/>
+        <!-- 注册广播监听 -->
+        <receiver android:name=".receiver.NetStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
