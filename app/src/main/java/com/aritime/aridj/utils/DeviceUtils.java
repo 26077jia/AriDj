@@ -22,7 +22,8 @@ public class DeviceUtils {
             WifiManager wifi = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
             if (wifi != null) {
                 WifiInfo info = wifi.getConnectionInfo();
-                if (info != null) return info.getMacAddress();
+                if (info != null)
+                    return info.getMacAddress();
             }
         } catch (Exception e) {
             e.printStackTrace();

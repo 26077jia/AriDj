@@ -2,8 +2,11 @@ package com.aritime.aridj.activity.welcome.model;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.text.TextUtils;
 
+import com.aritime.aridj.MyAppContext;
 import com.aritime.aridj.activity.welcome.contract.WelcomeContract;
+import com.aritime.aridj.bean.User;
 
 /**
  * Created by jiajia on 2016/11/17
@@ -29,12 +32,18 @@ public class WelcomeModel implements WelcomeContract.Model {
     }
 
     @Override
-    public String userName() {
-        return mSharedPreferences.getString("userName", "");
+    public String getUserId() {
+        MyAppContext myAppContext = (MyAppContext)mContext.getApplicationContext();
+        User mUser = myAppContext.getUser();
+        return mUser.userId;
     }
 
     @Override
-    public String userPwd() {
-        return mSharedPreferences.getString("userPwd", "");
+    public boolean staffVerify() {
+        //TODO 本地用户验证,根据userId来验证
+        if (!TextUtils.isEmpty(getUserId())){
+            //获取表，判断是否在表中
+        }
+        return false;
     }
 }

@@ -56,6 +56,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         mbtn_login.setOnClickListener(this);
         mll_card_login.setOnClickListener(this);
         mll_nocheck_login.setOnClickListener(this);
+        mll_nocheck_login.setOnClickListener(this);
 
     }
 

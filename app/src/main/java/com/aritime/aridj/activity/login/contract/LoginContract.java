@@ -32,9 +32,9 @@ public interface LoginContract {
         void noUserLogin();
     }
 
-    public interface Model {
+    interface Model {
+        boolean staffVerify();
 
-        String operators();
     }
 
 }

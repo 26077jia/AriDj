@@ -3,7 +3,9 @@ package com.aritime.aridj.activity.login.presenter;
 
 import android.text.TextUtils;
 
+import com.aritime.aridj.MyAppContext;
 import com.aritime.aridj.activity.login.contract.LoginContract;
+import com.aritime.aridj.bean.User;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -17,6 +19,8 @@ import java.util.List;
 
 public class LoginPresenter implements LoginContract.Presenter {
     private final LoginContract.View mView;
+    private String userID;
+    private String token;
 
     public LoginPresenter(LoginContract.View view) {
         this.mView = view;
@@ -28,11 +32,24 @@ public class LoginPresenter implements LoginContract.Presenter {
     @Override
     public void accountLogin() {
 
-        if (verified()) {// 账号信息不为空
-            if (LoginVerified()) {//登录验证成功
+        if (etVerified()) {// 账号信息不为空
+            if (LoginVerified()) {//登录验证成功，存入User全局变量
+
+                User mUser = new User();
+                mUser.setLogin(true);
+                mUser.setUserId(userID);
+                mUser.setUserName(mView.getAccount());
+                mUser.setUserPwd(mView.getPwd());
+                mUser.setToken(token);
+
                 if (mView.isRembPwd()) {// 登录的账号信息是否保存
-                    //TODO 保存账号信息
+                    mUser.setRember(true);
+                }else {
+                    mUser.setRember(false);
                 }
+
+                MyAppContext myAppContext = (MyAppContext) mView.getActContext().getApplicationContext();
+                myAppContext.setUser(mUser);
                 mView.loginSuccess();
             } else {
                 mView.loginFailed("登录验证失败");
@@ -68,7 +85,7 @@ public class LoginPresenter implements LoginContract.Presenter {
     /**
      * 验证账号密码输入框是否为空
      */
-    public boolean verified() {
+    public boolean etVerified() {
         if (TextUtils.isEmpty(mView.getAccount()) || TextUtils.isEmpty(mView.getPwd())) {
             mView.loginFailed("账号或密码不能为空！");
             return false;

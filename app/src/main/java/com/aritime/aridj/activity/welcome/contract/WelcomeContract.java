@@ -21,9 +21,10 @@ public class WelcomeContract {
     public interface Model {
         boolean isFirstLaunch();
 
-        String userName();
+        String getUserId();
+        boolean staffVerify();
 
-        String userPwd();
+
     }
 
 }

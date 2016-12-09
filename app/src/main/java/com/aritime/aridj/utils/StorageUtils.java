@@ -11,8 +11,8 @@ import java.io.File;
 
 public class StorageUtils {
 
-    // 获得手机内部存储控件的状态
     File dataFileDir = Environment.getDataDirectory();
+
     /**
      * 根据路径获取总存储空间
      * @param path
@@ -21,8 +21,8 @@ public class StorageUtils {
     public static String getMemoryInfo(File path) {
 
         StatFs stat = new StatFs(path.getPath());// 获得一个磁盘状态对象
-        long blockSize = stat.getBlockSizeLong ();   // 获得一个扇区的大小
-        long totalBlocks = stat.getBlockCountLong();    // 获得扇区的总数
+        long blockSize = stat.getBlockSizeLong ();// 获得一个扇区的大小
+        long totalBlocks = stat.getBlockCountLong();// 获得扇区的总数
         // 总空间
         return  ConvertUtils.byte2FitSize(totalBlocks * blockSize);
     }
@@ -33,9 +33,9 @@ public class StorageUtils {
      */
     public static String getMemoryFree(File path) {
 
-        StatFs stat = new StatFs(path.getPath()); // 获得一个磁盘状态对象
-        long blockSize = stat.getBlockSizeLong ();   // 获得一个扇区的大小
-        long availableBlocks = stat.getAvailableBlocksLong();   // 获得可用的扇区数量
+        StatFs stat = new StatFs(path.getPath());// 获得一个磁盘状态对象
+        long blockSize = stat.getBlockSizeLong ();// 获得一个扇区的大小
+        long availableBlocks = stat.getAvailableBlocksLong();// 获得可用的扇区数量
 
         return ConvertUtils.byte2FitSize(availableBlocks * blockSize);
 

@@ -32,7 +32,8 @@ public class MeasureFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        mPage = getArguments().getInt(MEAS_PAGE);
+      //  mPage = getArguments().getInt(MEAS_PAGE);
+
     }
 
     @Nullable
@@ -53,10 +54,11 @@ public class MeasureFragment extends Fragment {
     private void popWindowBottom() {
         BottomDialog bottomDialog = BottomDialog.newInstance();
         bottomDialog.show(getChildFragmentManager(),BottomDialog.class.getSimpleName());
+
 //        SignDialog msd = SignDialog.newInstance();
+
+
 //        msd.show(getChildFragmentManager(),SignDialog.class.getSimpleName());
 
-
     }
-
 }

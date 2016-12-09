@@ -31,7 +31,6 @@ public class RouterFragment extends Fragment  {
      //   Bundle args = new Bundle();
         RouterFragment fragment = new RouterFragment();
      //   fragment.setArguments(args);
-
         return fragment;
     }
 
@@ -47,14 +46,12 @@ public class RouterFragment extends Fragment  {
         rv_router = (RecyclerView) view.findViewById(R.id.rv_router);
         rv_router.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-
         routerBeanList.add(new Routerbean("车间一","2","4"));
         routerBeanList.add(new Routerbean("车间一","4","4"));
         routerBeanList.add(new Routerbean("车间一","3","4"));
         routerBeanList.add(new Routerbean("车间一","2","2"));
 
         routerAdapter = new RouterFragmentAdapter(getActivity(),routerBeanList);
-
 
         rv_router.setAdapter(routerAdapter);
         routerAdapter.setOnItemClickListener(new RouterFragmentAdapter.OnRecyclerViewItemClickListener(){

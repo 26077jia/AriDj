@@ -36,6 +36,7 @@ public class AboutActivity extends AppCompatActivity {
             socket.close();
         } catch (SocketException e) {
             e.printStackTrace();
+
         } catch (IOException e) {
             e.printStackTrace();
         }

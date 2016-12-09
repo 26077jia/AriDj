@@ -13,6 +13,7 @@ public class AnimationUtils {
         void onFinish();
     }
 
+    
     public static void slideToUp(View view){
         Animation slide = new TranslateAnimation(
                 Animation.RELATIVE_TO_SELF, 0.0f,

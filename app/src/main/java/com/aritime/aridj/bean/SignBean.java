@@ -3,9 +3,8 @@ package com.aritime.aridj.bean;
 import java.util.List;
 
 /**
- * 大学实体类
- * Created by MH on 2016/6/16.
- */
+ * 标牌实体类
+ * */
 public class SignBean {
 
     // 标牌名

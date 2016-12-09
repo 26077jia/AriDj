@@ -9,28 +9,28 @@ import com.aritime.aridj.receiver.NetStateReceiver;
 
 public class BaseActivity extends AppCompatActivity {
     private NetStateReceiver myReceiver;
-  
-    @Override  
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);  
-        registerReceiver();  
-    }  
-  
-    @Override  
-    protected void onDestroy() {  
-        super.onDestroy();  
-        unregisterReceiver();  
-    }  
-  
-     public void registerReceiver() {
+        super.onCreate(savedInstanceState);
+        registerReceiver();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver();
+    }
+
+    public void registerReceiver() {
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         myReceiver = new NetStateReceiver();
         this.registerReceiver(myReceiver, filter);
-     }
-  
-    private void unregisterReceiver() {  
-        if (myReceiver != null) {  
-            this.unregisterReceiver(myReceiver);  
-        }  
-    }  
+    }
+
+    private void unregisterReceiver() {
+        if (myReceiver != null) {
+            this.unregisterReceiver(myReceiver);
+        }
+    }
 }  
