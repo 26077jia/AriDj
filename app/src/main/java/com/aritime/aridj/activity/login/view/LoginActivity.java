@@ -16,6 +16,7 @@ import com.aritime.aridj.activity.login.contract.LoginContract;
 import com.aritime.aridj.activity.login.presenter.LoginPresenter;
 import com.aritime.aridj.activity.main.MainActivity;
 import com.aritime.aridj.base.BaseActivity;
+import com.aritime.aridj.utils.DeviceUtils;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 /**
@@ -57,6 +58,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         mll_card_login.setOnClickListener(this);
         mll_nocheck_login.setOnClickListener(this);
         mll_nocheck_login.setOnClickListener(this);
+        et_user_account.setText(DeviceUtils.getMacAddressByWifiInfo(getApplicationContext()));
 
     }
 
@@ -114,8 +116,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
-
-
     }
 
     /**

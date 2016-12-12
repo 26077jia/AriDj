@@ -12,4 +12,20 @@ public class SignBean {
 
     // 设备名
     public List<MachineBean> mMachineBeanList;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<MachineBean> getMachineBeanList() {
+        return mMachineBeanList;
+    }
+
+    public void setMachineBeanList(List<MachineBean> machineBeanList) {
+        mMachineBeanList = machineBeanList;
+    }
 }

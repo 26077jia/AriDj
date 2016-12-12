@@ -17,7 +17,7 @@ public class DeviceUtils {
      * @return MAC地址
      */
     @SuppressLint("HardwareIds")
-    private static String getMacAddressByWifiInfo(Context context) {
+    public static String getMacAddressByWifiInfo(Context context) {
         try {
             WifiManager wifi = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
             if (wifi != null) {
