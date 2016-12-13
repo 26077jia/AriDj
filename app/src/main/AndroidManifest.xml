@@ -27,6 +27,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!--允许 弹出系统级别的AlterDialog-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
         android:name=".MyAppContext"
@@ -57,11 +59,14 @@
         <activity android:name=".activity.accountmanage.view.AccountManageActivity"/>
         <activity android:name=".activity.setting.SettingActivity"/>
         <!-- 注册广播监听 -->
-        <receiver android:name=".receiver.NetStateReceiver">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-            </intent-filter>
+        <receiver android:name=".receiver.NetworkConnectChangedReceiver">
         </receiver>
+        <!--注册服务-->
+        <service android:name=".service.NetworkStateService" >
+            <intent-filter android:priority="1000" >
+                <action android:name="com.text.service.NetworkStateService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

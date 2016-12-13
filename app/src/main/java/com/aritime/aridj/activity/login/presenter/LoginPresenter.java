@@ -49,7 +49,7 @@ public class LoginPresenter implements LoginContract.Presenter {
                 }
 
                 MyAppContext myAppContext = (MyAppContext) mView.getActContext().getApplicationContext();
-                myAppContext.setUser(mUser);
+               // myAppContext.setUser(mUser);
                 mView.loginSuccess();
             } else {
                 mView.loginFailed("登录验证失败");

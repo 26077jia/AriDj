@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import com.aritime.aridj.R;
 
 /**
+ * 账号管理类
  * Created by jiajia on 2016/10/26.
  */
 

@@ -11,18 +11,16 @@ import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.aritime.aridj.receiver.NetworkConnectChangedReceiver;
+
 public class NetworkStateService extends Service {
 
-    // Class that answers queries about the state of network connectivity.
-    // 系统网络连接相关的操作管理类.
+    private ConnectivityManager connectivityManager;// 系统网络连接相关的操作管理类.
 
-    private ConnectivityManager connectivityManager;
-    // Describes the status of a network interface.
-    // 网络状态信息的实例
-    private NetworkInfo info;
+    private NetworkInfo info;// 网络状态信息的实例
 
     /**
-     * 当前处于的网络
+     * networkStatus 当前处于的网络
      * 0 ：null 
      * 1 ：2G/3G 
      * 2 ：wifi
@@ -30,6 +28,7 @@ public class NetworkStateService extends Service {
     public static int networkStatus; 
 
     public static final String NETWORKSTATE = "com.text.android.network.state"; // An action name
+    private NetworkConnectChangedReceiver mNetReceiver = new NetworkConnectChangedReceiver();
 
     /**
      * 广播实例
@@ -68,7 +67,6 @@ public class NetworkStateService extends Service {
                     networkStatus = 0;
 
                     Toast.makeText(context, "没有可用网络!\n请连接网络后刷新本界面", Toast.LENGTH_SHORT).show();
-
                     Intent it = new Intent();
                     it.putExtra("networkStatus", networkStatus);
                     it.setAction(NETWORKSTATE);
@@ -91,10 +89,10 @@ public class NetworkStateService extends Service {
     public void onCreate() {
         super.onCreate();
 
-        //注册网络状态的广播，绑定到mReceiver
+        //注册网络状态的广播，绑定到mNetReceiver
         IntentFilter mFilter = new IntentFilter();
         mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-        registerReceiver(mReceiver, mFilter);
+        registerReceiver(mNetReceiver, mFilter);
         Log.v("netCreate","onCreate");
     }
 

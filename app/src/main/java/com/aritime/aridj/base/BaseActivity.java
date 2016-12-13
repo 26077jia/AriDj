@@ -5,10 +5,10 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.aritime.aridj.receiver.NetStateReceiver;
+import com.aritime.aridj.receiver.NetworkConnectChangedReceiver;
 
 public class BaseActivity extends AppCompatActivity {
-    private NetStateReceiver myReceiver;
+    private NetworkConnectChangedReceiver myReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class BaseActivity extends AppCompatActivity {
 
     public void registerReceiver() {
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-        myReceiver = new NetStateReceiver();
+        myReceiver = new NetworkConnectChangedReceiver();
         this.registerReceiver(myReceiver, filter);
     }
 
